@@ -82,12 +82,12 @@ td {
 }
 
 .main-tabs {
-    width: 800px;
+    width: 960px;
 }
 
 @media screen and (max-width: 1000px) {
     .main-tabs {
-        width: 80%;
+        width: 96%;
     }
 }
 
