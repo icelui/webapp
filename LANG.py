@@ -89,6 +89,15 @@ fr = {
 
                Pour les modèles de _deep learning_, un réseau non séquentiel permet d'utiliser des couches de neurones récurrents (LSTM) pour traiter les séries temporelles,
                et de combiner les sorties de ces couches avec celles de couches "denses" utilisées pour les variables explicatives non séquentielles.
+
+               #### Améliorations en cours de développement :
+               Amélioration des prédictions grâce à des données supplémentaires d'évaluation des domaines et des vins, collectées sur le site de la
+               [Revue du vin de France](https://www.larvf.com/) (données accessibles uniquement aux abonnés).
+
+               Ajout de visualisations permettant d'estimer la corrélation entre la cote des vins et la note donnée par la Revue du vin de France.
+
+               Ajout d'options supplémentaires pour la définition d'un scénario d'investissement.
+
             '''
                                  
 
