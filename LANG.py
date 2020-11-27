@@ -1,15 +1,14 @@
 fr = {
-    'title': "La cote des grands vins français... (dont ceux que vous ne boirez jamais)",
+    'title': "La cote des grands vins français",
     'viz1': "Visualisation n°1",
     'viz2': "Visualisation n°2",
     'viz3': "Visualisation n°3",
-    'viz4': "Prédiction 2015 (viz.)",
-    'viz5': "Prédiction 2015 (reco.)",
-    'viz6': "Prédiction 2020 (reco.)",
+    'viz5': "Prédiction 2015 (test)",
+    'viz6': "Prédiction 2020",
     
     'in_progress': "En construction",
     
-    'choose_wine': "Choisissez un vin parmi cette sélection de vins choisis aléatoirement :",
+    'choose_wine': "Choisissez un vin parmi cette sélection aléatoire :",
     'choose_appellation': "Choisissez une appellation :",
     'vintage': "Millésime",
     'price': "Cote en euros (bouteille de 75 cL)",
@@ -42,17 +41,18 @@ fr = {
     'title_viz1': "Commençons par une visualisation simple...",
     'title_viz2': "Qualité des millésimes",
     'title_viz3': "Un peu d'animation...",
-    'title_viz4': "Visualisation du modèle prédictif '2015' (modèle de test)",
-    'title_viz5': "Recommandations d'investissement du modèle prédictif '2015' (modèle de test)",
+    'title_viz5': "Modèles prédictifs '2015' (pour tester la validité des prédictions)",
     'title_viz6': "Recommandations d'investissement du modèle prédictif '2020' (modèle à utiliser aujourd'hui)",
 
     'viz1_desc': "Voici la cote actuelle des millésimes de ce vin (1982 et postérieurs) selon ",
     'viz2_desc': "La cote moyenne des vins de l'appellation dans chaque millésime permet de repérer les meilleurs millésimes :",
     'viz3_desc': "Lancez l'animation pour voir l'évolution de la cote moyenne de chaque vin au fil des années :",
-    'viz4_desc': """Ici le modèle prédictif, fondé sur XGBoost, propose une prédiction de cote de chaque vin dans cinq ans.
-                    Il a été entraîné avec en variables explicatives les données de cotation des années 2010 et antérieures,
-                    et en cible, les cotes de l'année 2015. Il a ensuite été utilisé pour prédire la cote des vins en 2020
-                    à partir des données de cotation disponibles en 2015.""",
+    'viz5_desc': """Imaginez... Nous sommes en 2015. Le modèle prédist la cote de chaque vin dans 
+                    cinq ans, soit en 2020. Il a été entraîné comme il aurait pu l'être en 2015 : en variable cible, 
+                    les cotes de la dernière année disponible, soit 2015 ; en variables explicatives, les données disponibles
+                    5 ans avant, soit en 2010. Le modèle entraîné est ensuite utilisé pour prédire la cote dans 5 ans, soit
+                    en 2020, à partir des données disponibles en 2015. De ces prédictions est déduite une recommandation
+                    d'investissement, dont la performance est évaluée a posteriori, en 2020.""",
 
 
 

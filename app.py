@@ -45,9 +45,6 @@ DF_viz3_data = DF_ideal[DF_ideal.millesime>=1990][L_col_id + L_col_cote].dropna(
 DF_temp = DF_viz3_data.groupby(["appellation", "nom_du_vin"], as_index=False).first()[["appellation", "nom_du_vin"]].groupby("appellation", as_index=False).count()
 DF_viz3_choice = DF_temp[DF_temp["nom_du_vin"]>4][["appellation"]].sort_values(by='appellation')
 
-DF_viz4_data = DF_ideal_pred_xg_2015
-DF_viz4_choice = DF_viz4_data[['pays_region', 'domaine', 'appellation', 'nom_du_vin', 'couleur', 'millesime']]
-
 """ # S'arrêter là si besoin pour débugguer :
 sys.exit() """
 
@@ -143,28 +140,6 @@ app.layout = html.Div(className='main', children=[
                 )]
             ), 
             dcc.Tab(              
-                id='tab-viz4',
-                value='tab-viz4',
-                label=lang['viz4'],
-                className='tab',
-                selected_className='selected-tab',
-                children=[html.Div(
-                    id='div_tab_viz4',
-                    className='div-tab',
-                    children=[
-                        html.H3(lang['title_viz4']),
-                        html.H4(lang['choose_wine']),
-                        dcc.Dropdown(
-                            id='viz4_choice',
-                            className='viz-dropdown',
-                            multi=False
-                        ),
-                        html.H4([lang['viz4_desc']]),
-                        html.Div(id='viz4_result', className='viz-result')
-                    ]
-                )]
-            ),            
-            dcc.Tab(              
                 id='tab-viz5',
                 value='tab-viz5',
                 label=lang['viz5'],
@@ -175,6 +150,7 @@ app.layout = html.Div(className='main', children=[
                     className='div-tab',
                     children=[
                         html.H3(lang['title_viz5']),
+                        html.P(lang['viz5_desc']),
                         html.Table(className='table-center', children=[html.Tbody([
                             html.Tr(children=[
                                 html.Td(children=html.H6(lang['choose_model'])),
@@ -365,55 +341,6 @@ def set_viz3_result(value):
     children = dcc.Graph(id='viz3-graph', figure=fig)
     return children
 
-# Actualiser le graphique du 4e onglet en fonction du choix de vin fait par l'utilisateur :
-@app.callback(
-    Output('viz4_result', 'children'),
-    [Input('viz4_choice', 'value')]
-)
-def set_viz4_result(value):
-    DF_data = DF_viz4_data.loc[[value]]
-    DF_data = DF_data.melt(id_vars=L_col_id+['pred_cote'], value_vars=L_col_cote, var_name='annee_cote', value_name='cote').reset_index()
-    DF_data['annee_cote'] = DF_data['annee_cote'].apply(lambda s: int(re.sub(r"^cote_", "", s)))
-    DF_data = DF_data.sort_values(by='annee_cote').dropna()
-    DF_data1 = DF_data[DF_data.annee_cote<=2015]
-    DF_data2 = DF_data[DF_data.annee_cote==2015]
-    DF_data2 = DF_data2[['annee_cote', 'cote']].append(pd.Series({'annee_cote': 2020, 'cote': DF_data2.iloc[0,:]['pred_cote']}), ignore_index=True)
-    DF_data3 = DF_data[DF_data.annee_cote>=2015]
-
-    fig = go.Figure(
-        data = go.Scatter(
-            x=DF_data3.annee_cote,
-            y=DF_data3.cote,
-            mode='lines+markers',
-            name=lang['unknown_in'] + ' 2015',
-            line=dict(color="#C0BCFF")
-        ), 
-        layout = go.Layout(
-            showlegend=True
-        )
-    )
-    fig.add_trace(
-        go.Scatter(
-            x=DF_data2.annee_cote, 
-            y=DF_data2.cote,
-            mode="lines+markers",
-            name=lang['prediction'],
-            line=dict(color='brown', dash='dot')
-        )
-    )
-    fig.add_trace(go.Scatter(
-        x=DF_data1.annee_cote,
-        y=DF_data1.cote,
-        mode='lines+markers',
-        name=lang['known_in'] + ' 2015',
-        line=dict(color="#000060")
-    ))
-    fig.update_traces(marker=go.scatter.Marker(size=10))
-    fig.update_xaxes(title_text=lang['estimation_year'])
-    fig.update_yaxes(title_text=lang['price'])
-    fig.update_yaxes(range=[0, 1.05*max(DF_data1.cote.max(), DF_data2.cote.max(), DF_data3.cote.max())])
-    children = dcc.Graph(id='viz4-graph', figure=fig)
-    return children
 
 # Actualiser la sélection aléatoire de vins proposés en fonction du modèle choisi dans l'onglet de prédiction 2015 :
 @app.callback(
@@ -434,7 +361,7 @@ def set_random_wine_choice_viz5(value):
     value = options[0]['value']
     return options, value
 
-# Actualiser les choix proposés à l'utilisateur en fonction de l'action qu'il a choisie :
+# Pour l'onglet de prédiction 2015, actualiser les choix proposés à l'utilisateur en fonction de l'action qu'il a choisie :
 @app.callback(
     [Output('viz5_tr_choose_number', 'style'),
      Output('viz5_tr_choose_wine', 'style')],
