@@ -176,34 +176,3 @@ td {
     margin-right: auto;
 }
 
-
-
-/* Si besoin de responsive design :
-@media screen and (max-width: 600px) {
-    body {
-      background-color: olive;
-    }
-  }
-*/
-
-/* Autres paramètres possibles :
-color: black;
-border-style: solid;
-border-top-width: 2px;
-border-bottom-width: 2px;
-border-left-width: 0px;
-border-right-width: 0px;
-border-color: #D0B0B0;
-font-weight: bold;
-font-style: normal;
-font-family: Arial narrow,Arial,Sans,sans-serif;
-text-align: left;
-background-color: #FFF7F7;
-margin-left: 0px;
-margin-bottom: 2px;
-margin-top: 0px;
-position: relative;
-overflow: auto;
-border-style: groove;
-*/ 
-

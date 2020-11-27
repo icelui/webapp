@@ -23,6 +23,7 @@ fr = {
     'unknown_in': "Cotes non utilisées par le modèle prédictif, car inconnues en",
     'choose_number': "Choisissez le nombre de vins (de domaines différents) de votre portefeuille d'investissement :",
     'choose_model': "Choisissez un modèle prédictif :",
+    'choose_action': "Que voulez-vous faire ?",
     'infl_avg_01': "L'inflation moyenne des vins, entre ",
     'infl_avg_02': " et ",
     'infl_avg_03': ", sur l'ensemble des vins faisant l'objet d'une prédiction, est de",
@@ -35,6 +36,8 @@ fr = {
     'color': "Couleur",
     'xgboost': "Forêts aléatoires (random forests) boostées par la technologie XGBoost",
     'tensorflow': "Réseau de neurones denses et récurrents entraîné avec Tensorflow",
+    'see_pred': "Visualiser la prédiction de cote dans 5 ans pour quelques vins de la base",
+    'get_reco_test': "Obtenir et évaluer une recommandation d'investissement",
 
     'title_viz1': "Commençons par une visualisation simple...",
     'title_viz2': "Qualité des millésimes",
