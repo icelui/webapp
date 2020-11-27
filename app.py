@@ -24,6 +24,7 @@ DF_ideal = pd.read_csv("data/idealwine.csv")
 DF_ideal_pred_xg_2015 = pd.read_csv("data/idealwine_pred_2015_2020.csv")
 DF_ideal_pred_tf_2015 = pd.read_csv("data/idealwine_pred_tf_2015_2020.csv")
 DF_ideal_pred_xg_2020 = pd.read_csv("data/idealwine_pred_2020_2025.csv")
+DF_ideal_pred_tf_2020 = pd.read_csv("data/idealwine_pred_2020_2025.csv")  # Nom de fichier à corriger lorsque disponible
 
 DF_viz1_data = DF_ideal[DF_ideal.millesime>=1982].copy()
 DF_viz1_choice = DF_viz1_data.groupby(['pays_region', 'domaine', 'appellation', 'nom_du_vin', 'couleur'], as_index=False)['cote_2020'].count()
@@ -48,6 +49,74 @@ DF_viz3_choice = DF_temp[DF_temp["nom_du_vin"]>4][["appellation"]].sort_values(b
 """ # S'arrêter là si besoin pour débugguer :
 sys.exit() """
 
+
+
+#####################################################################
+# FONCTIONS DE GENERATION INITIALE DE CONTENU (hors callbacks) :
+
+def get_prediction_tab(vizname):
+    return dcc.Tab(              
+        id='tab-'+vizname,
+        value='tab-'+vizname,
+        label=lang[vizname],
+        className='tab',
+        selected_className='selected-tab',
+        children=[html.Div(
+            id='div_tab_'+vizname,
+            className='div-tab',
+            children=[
+                html.H3(lang['title_'+vizname]),
+                html.P(lang[vizname+'_desc']),
+                html.Table(className='table-center', children=[html.Tbody([
+                    html.Tr(children=[
+                        html.Td(children=html.H6(lang['choose_model'])),
+                        html.Td(children=[dcc.Dropdown(
+                            id=vizname+'_choice_model',
+                            className='viz-dropdown-large',
+                            multi=False,
+                            options=[
+                                {'label': lang['xgboost'], 'value': 'xg'},
+                                {'label': lang['tensorflow'], 'value': 'tf'}
+                            ],
+                            value='xg'
+                        )])
+                    ]),
+                    html.Tr(children=[
+                        html.Td(children=html.H6(lang['choose_action'])),
+                        html.Td(children=[dcc.Dropdown(
+                            id=vizname+'_choice_action',
+                            className='viz-dropdown-large',
+                            multi=False,
+                            options=[
+                                {'label': lang['see_pred'], 'value': 'viz'},
+                                {'label': lang['get_reco_test'], 'value': 'reco'}
+                            ],
+                            value='reco'
+                        )])
+                    ]), 
+                    html.Tr(id=vizname+'_tr_choose_number', children=[
+                        html.Td(children=html.H6(lang['choose_number'])),
+                        html.Td(children=[dcc.Dropdown(
+                            id=vizname+'_choice_nbwines',
+                            className='viz-dropdown-small',
+                            multi=False,
+                            options=[{'label': n, 'value': n} for n in np.arange(5, 55, 5)],
+                            value=20
+                        )])
+                    ]),
+                    html.Tr(id=vizname+'_tr_choose_wine', children=[
+                        html.Td(children=html.H6(lang['choose_wine'])),
+                        html.Td(children=[dcc.Dropdown(
+                            id=vizname+'_choice_wine',
+                            className='viz-dropdown-large',
+                            multi=False
+                        )])
+                    ]) 
+                ])]),
+                html.Div(id=vizname+'_result', className='viz-result')
+            ]
+        )]
+    )
 
 #####################################################################
 # DEFINITION GENERALE DU CONTENU DE L'APPLICATION WEB :
@@ -139,97 +208,8 @@ app.layout = html.Div(className='main', children=[
                     ]
                 )]
             ), 
-            dcc.Tab(              
-                id='tab-viz5',
-                value='tab-viz5',
-                label=lang['viz5'],
-                className='tab',
-                selected_className='selected-tab',
-                children=[html.Div(
-                    id='div_tab_viz5',
-                    className='div-tab',
-                    children=[
-                        html.H3(lang['title_viz5']),
-                        html.P(lang['viz5_desc']),
-                        html.Table(className='table-center', children=[html.Tbody([
-                            html.Tr(children=[
-                                html.Td(children=html.H6(lang['choose_model'])),
-                                html.Td(children=[dcc.Dropdown(
-                                    id='viz5_choice_model',
-                                    className='viz-dropdown-large',
-                                    multi=False,
-                                    options=[
-                                        {'label': lang['xgboost'], 'value': 'xg'},
-                                        {'label': lang['tensorflow'], 'value': 'tf'}
-                                    ],
-                                    value='xg'
-                                )])
-                            ]),
-                            html.Tr(children=[
-                                html.Td(children=html.H6(lang['choose_action'])),
-                                html.Td(children=[dcc.Dropdown(
-                                    id='viz5_choice_action',
-                                    className='viz-dropdown-large',
-                                    multi=False,
-                                    options=[
-                                        {'label': lang['see_pred'], 'value': 'viz'},
-                                        {'label': lang['get_reco_test'], 'value': 'reco'}
-                                    ],
-                                    value='reco'
-                                )])
-                            ]), 
-                            html.Tr(id='viz5_tr_choose_number', children=[
-                                html.Td(children=html.H6(lang['choose_number'])),
-                                html.Td(children=[dcc.Dropdown(
-                                    id='viz5_choice_nbwines',
-                                    className='viz-dropdown-small',
-                                    multi=False,
-                                    options=[{'label': n, 'value': n} for n in np.arange(5, 55, 5)],
-                                    value=20
-                                )])
-                            ]),
-                            html.Tr(id='viz5_tr_choose_wine', children=[
-                                html.Td(children=html.H6(lang['choose_wine'])),
-                                html.Td(children=[dcc.Dropdown(
-                                    id='viz5_choice_wine',
-                                    className='viz-dropdown-large',
-                                    multi=False
-                                )])
-                            ]) 
-                        ])]),
-                        html.Div(id='viz5_result', className='viz-result')
-                    ]
-                )]
-            ),            
-            dcc.Tab(              
-                id='tab-viz6',
-                value='tab-viz6',
-                label=lang['viz6'],
-                className='tab',
-                selected_className='selected-tab',
-                children=[html.Div(
-                    id='div_tab_viz6',
-                    className='div-tab',
-                    children=[
-                        html.H3(lang['title_viz6']),
-                        html.Table(className='table-center', children=[
-                            html.Tbody(html.Tr(children=[
-                                html.Td(children=html.H5(lang['choose_number'])),
-                                html.Td(children=[
-                                    dcc.Dropdown(
-                                        id='viz6_choice',
-                                        className='viz-dropdown-small',
-                                        multi=False,
-                                        options=[{'label': n, 'value': n} for n in np.arange(5, 55, 5)],
-                                        value=20
-                                    )
-                                ])
-                            ]))
-                        ]),
-                        html.Div(id='viz6_result', className='viz-result')
-                    ]
-                )]
-            ),            
+            get_prediction_tab('viz5'),
+            get_prediction_tab('viz6')
         ]
     )
 ])
@@ -267,8 +247,6 @@ def set_random_wine_choice_viz4(pathname):
     )]
     value = options[0]['value']
     return options, value
-
-
 
 
 #####################################################################
@@ -341,19 +319,9 @@ def set_viz3_result(value):
     children = dcc.Graph(id='viz3-graph', figure=fig)
     return children
 
-
-# Actualiser la sélection aléatoire de vins proposés en fonction du modèle choisi dans l'onglet de prédiction 2015 :
-@app.callback(
-    [Output('viz5_choice_wine', 'options'),
-     Output('viz5_choice_wine', 'value')],
-    [Input('viz5_choice_model', 'value')]
-)
-def set_random_wine_choice_viz5(value):
-    if value=='tf':
-        DF_ideal_pred_2015 = DF_ideal_pred_tf_2015
-    else:
-        DF_ideal_pred_2015 = DF_ideal_pred_xg_2015
-    DF_choice = DF_ideal_pred_2015[['pays_region', 'domaine', 'appellation', 'nom_du_vin', 'couleur', 'millesime']].sample(24)
+# Actualiser la sélection aléatoire de vins proposés en fonction du modèle choisi dans les onglets de prédiction :
+def set_random_wine_choice(DF_ideal_pred):
+    DF_choice = DF_ideal_pred[['pays_region', 'domaine', 'appellation', 'nom_du_vin', 'couleur', 'millesime']].sample(24)
     options = [{'label': label, 'value': value} for (value, label) in zip(
         DF_choice.index,    
         DF_choice.apply(lambda S: S['domaine'] + " : " + S['nom_du_vin'] + " " + str(S['millesime']) + " (" + S['appellation'] + ")", axis=1)
@@ -361,13 +329,33 @@ def set_random_wine_choice_viz5(value):
     value = options[0]['value']
     return options, value
 
-# Pour l'onglet de prédiction 2015, actualiser les choix proposés à l'utilisateur en fonction de l'action qu'il a choisie :
 @app.callback(
-    [Output('viz5_tr_choose_number', 'style'),
-     Output('viz5_tr_choose_wine', 'style')],
-    [Input('viz5_choice_action', 'value')]
+    [Output('viz5_choice_wine', 'options'),
+     Output('viz5_choice_wine', 'value')],
+    [Input('viz5_choice_model', 'value')]
 )
-def set_viz5_tr(value):
+def set_random_wine_choice_viz5(value):
+    if value=='tf':
+        DF_ideal_pred = DF_ideal_pred_tf_2015
+    else:
+        DF_ideal_pred = DF_ideal_pred_xg_2015
+    return set_random_wine_choice(DF_ideal_pred)
+
+@app.callback(
+    [Output('viz6_choice_wine', 'options'),
+     Output('viz6_choice_wine', 'value')],
+    [Input('viz6_choice_model', 'value')]
+)
+def set_random_wine_choice_viz6(value):
+    if value=='tf':
+        DF_ideal_pred = DF_ideal_pred_tf_2020
+    else:
+        DF_ideal_pred = DF_ideal_pred_xg_2020
+    return set_random_wine_choice(DF_ideal_pred)
+
+
+# Pour les onglets de prédiction, actualiser les choix proposés à l'utilisateur en fonction de l'action qu'il a choisie :
+def set_tr(value):
     if value=='reco':
         choose_number_style = {}
         choose_wine_style = {'display': 'none'}
@@ -376,8 +364,24 @@ def set_viz5_tr(value):
         choose_wine_style = {}  
     return choose_number_style, choose_wine_style
 
+@app.callback(
+    [Output('viz5_tr_choose_number', 'style'),
+     Output('viz5_tr_choose_wine', 'style')],
+    [Input('viz5_choice_action', 'value')]
+)
+def set_viz5_tr(value):
+    return set_tr(value)
+
+@app.callback(
+    [Output('viz6_tr_choose_number', 'style'),
+     Output('viz6_tr_choose_wine', 'style')],
+    [Input('viz6_choice_action', 'value')]
+)
+def set_viz6_tr(value):
+    return set_tr(value)
+
 # Fonction de construction de la visualisation, commune aux onglets de prédiction :
-def set_pred_viz(value, DF_data, year=2015, delta=5):
+def set_pred_viz(value, DF_data, year, delta=5):
     DF_data0 = DF_data.loc[[value]]
     DF_data0 = DF_data0.melt(id_vars=L_col_id+['pred_cote'], value_vars=L_col_cote, var_name='annee_cote', value_name='cote').reset_index()
     DF_data0['annee_cote'] = DF_data0['annee_cote'].apply(lambda s: int(re.sub(r"^cote_", "", s)))
@@ -385,29 +389,32 @@ def set_pred_viz(value, DF_data, year=2015, delta=5):
     DF_data1 = DF_data0[DF_data0.annee_cote<=year]
     DF_data2 = DF_data0[DF_data0.annee_cote==year]
     DF_data2 = DF_data2[['annee_cote', 'cote']].append(pd.Series({'annee_cote': (year+delta), 'cote': DF_data2.iloc[0,:]['pred_cote']}), ignore_index=True)
-    DF_data3 = DF_data0[DF_data0.annee_cote>=year]
 
-    fig = go.Figure(
-        data = go.Scatter(
-            x=DF_data3.annee_cote,
-            y=DF_data3.cote,
-            mode='lines+markers',
-            name=lang['unknown_in'] + ' ' + str(year),
-            line=dict(color="#C0BCFF")
-        ), 
-        layout = go.Layout(
-            showlegend=True
-        )
+    trace1 = go.Scatter(
+        x=DF_data2.annee_cote, 
+        y=DF_data2.cote,
+        mode="lines+markers",
+        name=lang['prediction'],
+        line=dict(color='brown', dash='dot')
     )
-    fig.add_trace(
-        go.Scatter(
-            x=DF_data2.annee_cote, 
-            y=DF_data2.cote,
-            mode="lines+markers",
-            name=lang['prediction'],
-            line=dict(color='brown', dash='dot')
+    if year<2020:
+        DF_data3 = DF_data0[DF_data0.annee_cote>=year]  # Les cotes non fournies au modèle
+        fig = go.Figure(
+            data = go.Scatter(
+                x=DF_data3.annee_cote,
+                y=DF_data3.cote,
+                mode='lines+markers',
+                name=lang['unknown_in'] + ' ' + str(year),
+                line=dict(color="#C0BCFF")
+            ), 
+            layout = go.Layout(showlegend=True)
         )
-    )
+        fig.add_trace(trace1)
+    else:
+        fig = go.Figure(
+            data = trace1, 
+            layout = go.Layout(showlegend=True)
+        ) 
     fig.add_trace(go.Scatter(
         x=DF_data1.annee_cote,
         y=DF_data1.cote,
@@ -418,8 +425,11 @@ def set_pred_viz(value, DF_data, year=2015, delta=5):
     fig.update_traces(marker=go.scatter.Marker(size=10))
     fig.update_xaxes(title_text=lang['estimation_year'])
     fig.update_yaxes(title_text=lang['price'])
-    fig.update_yaxes(range=[0, 1.05*max(DF_data1.cote.max(), DF_data2.cote.max(), DF_data3.cote.max())])
-    children = dcc.Graph(id='viz4-graph', figure=fig)
+    if year<2020:
+        fig.update_yaxes(range=[0, 1.05*max(DF_data1.cote.max(), DF_data2.cote.max(), DF_data3.cote.max())])
+    else:
+        fig.update_yaxes(range=[0, 1.05*max(DF_data1.cote.max(), DF_data2.cote.max())]) 
+    children = dcc.Graph(figure=fig)
     return children
 
 # Fonction de construction de la recommandation d'investissement, commune aux onglets de prédiction :
@@ -488,25 +498,34 @@ def set_reco_result(value, DF_data, year=2015, delta=5):
 )
 def set_viz5_result(value_model, value_action, value_nbwines, value_wine):
     if value_model=='tf':
-        DF_viz5_data = DF_ideal_pred_tf_2015
+        DF_data = DF_ideal_pred_tf_2015
     else:
-        DF_viz5_data = DF_ideal_pred_xg_2015
+        DF_data = DF_ideal_pred_xg_2015
 
     if value_action=='reco':
-        children = set_reco_result(value_nbwines, DF_data=DF_viz5_data, year=2015, delta=5)
+        children = set_reco_result(value_nbwines, DF_data=DF_data, year=2015, delta=5)
     else:
-        children = set_pred_viz(value_wine, DF_data=DF_viz5_data, year=2015, delta=5)
-
+        children = set_pred_viz(value_wine, DF_data=DF_data, year=2015, delta=5)
     return children
 
-# Actualiser la restitution affichée pour le modèle 2020 en fonction des choix de l'utilisateur :
+# Actualiser la restitution affichée pour le modèle 2020 en fonction des différents choix de l'utilisateur :
 @app.callback(
     Output('viz6_result', 'children'),
-    [Input('viz6_choice', 'value')]
+    [Input('viz6_choice_model', 'value'),
+     Input('viz6_choice_action', 'value'),
+     Input('viz6_choice_nbwines', 'value'),
+     Input('viz6_choice_wine', 'value')]
 )
-def set_viz6_result(value):
-    DF_viz6_data = DF_ideal_pred_xg_2020
-    children = set_reco_result(value, DF_data=DF_viz6_data, year=2020, delta=5)
+def set_viz6_result(value_model, value_action, value_nbwines, value_wine):
+    if value_model=='tf':
+        DF_data = DF_ideal_pred_tf_2020
+    else:
+        DF_data = DF_ideal_pred_xg_2020
+
+    if value_action=='reco':
+        children = set_reco_result(value_nbwines, DF_data=DF_data, year=2020, delta=5)
+    else:
+        children = set_pred_viz(value_wine, DF_data=DF_data, year=2020, delta=5)
     return children
 
 

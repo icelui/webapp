@@ -34,7 +34,7 @@ fr = {
     'domain': "Domaine", 
     'color': "Couleur",
     'xgboost': "Forêts aléatoires (random forests) boostées par la technologie XGBoost",
-    'tensorflow': "Réseau de neurones denses et récurrents entraîné avec Tensorflow",
+    'tensorflow': "Réseau de neurones denses et récurrents (LSTM) entraîné avec Tensorflow",
     'see_pred': "Visualiser la prédiction de cote dans 5 ans pour quelques vins de la base",
     'get_reco_test': "Obtenir et évaluer une recommandation d'investissement",
 
@@ -42,17 +42,23 @@ fr = {
     'title_viz2': "Qualité des millésimes",
     'title_viz3': "Un peu d'animation...",
     'title_viz5': "Modèles prédictifs '2015' (pour tester la validité des prédictions)",
-    'title_viz6': "Recommandations d'investissement du modèle prédictif '2020' (modèle à utiliser aujourd'hui)",
+    'title_viz6': "Modèles prédictifs '2020' (pour vous aider à investir aujourd'hui)",
 
     'viz1_desc': "Voici la cote actuelle des millésimes de ce vin (1982 et postérieurs) selon ",
     'viz2_desc': "La cote moyenne des vins de l'appellation dans chaque millésime permet de repérer les meilleurs millésimes :",
     'viz3_desc': "Lancez l'animation pour voir l'évolution de la cote moyenne de chaque vin au fil des années :",
-    'viz5_desc': """Imaginez... Nous sommes en 2015. Le modèle prédist la cote de chaque vin dans 
-                    cinq ans, soit en 2020. Il a été entraîné comme il aurait pu l'être en 2015 : en variable cible, 
+    'viz5_desc': """Imaginez... Nous sommes en 2015. Le modèle prédit la cote de chaque vin dans 
+                    5 ans, soit en 2020. Il a été entraîné comme il aurait pu l'être en 2015 : en variable cible, 
                     les cotes de la dernière année disponible, soit 2015 ; en variables explicatives, les données disponibles
-                    5 ans avant, soit en 2010. Le modèle entraîné est ensuite utilisé pour prédire la cote dans 5 ans, soit
+                    5 ans avant, soit en 2010. Le modèle entraîné est ensuite utilisé pour prédire les cotes dans 5 ans, soit
                     en 2020, à partir des données disponibles en 2015. De ces prédictions est déduite une recommandation
                     d'investissement, dont la performance est évaluée a posteriori, en 2020.""",
+    'viz6_desc': """Nous sommes en 2020. Le modèle prédit la cote de chaque vin dans 
+                    5 ans, soit en 2025. Il a été entraîné avec en variable cible, 
+                    les cotes de la dernière année disponible, soit 2020 ; en variables explicatives, les données disponibles
+                    5 ans avant, soit en 2015. Le modèle entraîné est ensuite utilisé pour prédire les cotes 
+                    en 2025, à partir des données disponibles en 2020. De ces prédictions est déduite une recommandation
+                    d'investissement."""
 
 
 
