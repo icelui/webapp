@@ -129,7 +129,7 @@ app.layout = html.Div(className='main', children=[
     html.H1(children=lang['title']),
     dcc.Tabs(
         id='main-tabs',
-        value='tab-viz1',
+        value='tab-viz6',
         className='main-tabs',
         parent_className='parent-main-tabs',
         colors={
@@ -139,72 +139,73 @@ app.layout = html.Div(className='main', children=[
         },
         children = [
             dcc.Tab(
-                id='tab-viz1',
-                value='tab-viz1',
-                label=lang['viz1'],
+                id='tab-viz0',
+                value='tab-viz0',
+                label=lang['viz0'],
                 className='tab',
                 selected_className='selected-tab',
                 children=[html.Div(
-                    id='div_tab_viz1',
+                    id='div_tab_viz0',
                     className='div-tab',
-                    children=[
-                        html.H3(lang['title_viz1']),
-                        html.H4(lang['choose_wine']),
-                        dcc.Dropdown(
-                            id='viz1_choice',
-                            className='viz-dropdown',
-                            multi=False
-                        ),
-                        html.H4([lang['viz1_desc'], html.A('idealwine.com', href='https://www.idealwine.com'), " :"]),
-                        html.Div(id='viz1_result', className='viz-result')
-                    ]
-                )]
-            ), 
-            dcc.Tab(
-                id='tab-viz2',
-                value='tab-viz2',
-                label=lang['viz2'],
-                className='tab',
-                selected_className='selected-tab',
-                children=[html.Div(
-                    id='div_tab_viz2',
-                    className='div-tab',
-                    children=[
-                        html.H3(lang['title_viz2']),
-                        html.H4(lang['choose_appellation']),
-                        dcc.Dropdown(
-                            id='viz2_choice',
-                            className='viz-dropdown',
-                            multi=False,
-                            options=(options := [{'label': app, 'value': app} for app in DF_viz2_choice['appellation'].tolist()]),
-                            value=options[0]['value']
-                        ),
-                        html.H4([lang['viz2_desc']]),
-                        html.Div(id='viz2_result', className='viz-result')
-                    ]
+                    children=[dcc.Markdown(lang['info'])]
                 )]
             ),
             dcc.Tab(
-                id='tab-viz3',
-                value='tab-viz3',
-                label=lang['viz3'],
+                id='tab-viz4',
+                value='tab-viz4',
+                label=lang['viz4'],
                 className='tab',
                 selected_className='selected-tab',
                 children=[html.Div(
-                    id='div_tab_viz3',
+                    id='div_tab_viz4',
                     className='div-tab',
                     children=[
-                        html.H3(lang['title_viz3']),
-                        html.H4(lang['choose_appellation']),
-                        dcc.Dropdown(
-                            id='viz3_choice',
-                            className='viz-dropdown',
-                            multi=False,
-                            options=(options := [{'label': app, 'value': app} for app in DF_viz3_choice['appellation'].tolist()]),
-                            value=options[0]['value']
-                        ),
-                        html.H4([lang['viz3_desc']]),
-                        html.Div(id='viz3_result', className='viz-result')
+                        html.H3(lang['title_viz4']),
+                        html.Table(className='table-center', children=[html.Tbody([
+                            html.Tr(children=[
+                                html.Td(children=html.H6(lang['choose_action'])),
+                                html.Td(children=[dcc.Dropdown(
+                                    id='viz4_choice_action',
+                                    className='viz-dropdown-large',
+                                    multi=False,
+                                    options=[
+                                        {'label': lang['title_viz1'], 'value': 'viz1'},
+                                        {'label': lang['title_viz2'], 'value': 'viz2'},
+                                        {'label': lang['title_viz3'], 'value': 'viz3'}
+                                    ],
+                                    value='viz1'
+                                )])
+                            ]),
+                            html.Tr(id='tr_viz1', children=[
+                                html.Td(children=html.H6(lang['choose_wine'])),
+                                html.Td(children=[dcc.Dropdown(
+                                    id='viz1_choice',
+                                    className='viz-dropdown-large',
+                                    multi=False,
+                                )])
+                            ]),
+                            html.Tr(id='tr_viz2', children=[
+                                html.Td(children=html.H6(lang['choose_appellation'])),
+                                html.Td(children=[dcc.Dropdown(
+                                    id='viz2_choice',
+                                    className='viz-dropdown-large',
+                                    multi=False,
+                                    options=(options := [{'label': app, 'value': app} for app in DF_viz2_choice['appellation'].tolist()]),
+                                    value=options[0]['value']
+                                )])
+                            ]),
+                            html.Tr(id='tr_viz3', children=[
+                                html.Td(children=html.H6(lang['choose_appellation'])),
+                                html.Td(children=[dcc.Dropdown(
+                                    id='viz3_choice',
+                                    className='viz-dropdown-large',
+                                    multi=False,
+                                    options=(options := [{'label': app, 'value': app} for app in DF_viz3_choice['appellation'].tolist()]),
+                                    value=options[0]['value']
+                                )])
+                            ])
+                        ])]),
+                        html.Div(id='viz4_result', className='viz-result')
                     ]
                 )]
             ), 
@@ -233,55 +234,42 @@ def set_random_wine_choice_viz1(pathname):
     value = options[0]['value']
     return options, value
 
-# Initialiser le choix aléatoire de vins pour l'onglet 4 :
-@app.callback(
-    [Output('viz4_choice', 'options'),
-     Output('viz4_choice', 'value')],
-    [Input('url', 'pathname')]
-)
-def set_random_wine_choice_viz4(pathname):
-    DF_choice = DF_viz4_choice.sample(24)
-    options = [{'label': label, 'value': value} for (value, label) in zip(
-        DF_choice.index,    
-        DF_choice.apply(lambda S: S['domaine'] + " : " + S['nom_du_vin'] + " " + str(S['millesime']) + " (" + S['appellation'] + ")", axis=1)
-    )]
-    value = options[0]['value']
-    return options, value
 
 
 #####################################################################
 # MISES A JOUR EN FONCTION DES ACTIONS DE L'UTILISATEUR :
 
-# Actualiser le graphique du 1er onglet en fonction du choix de vin fait par l'utilisateur :
+# Pour l'onglet de visualisation, actualiser les choix proposés à l'utilisateur en fonction de l'action qu'il a choisie :
 @app.callback(
-    Output('viz1_result', 'children'),
-    [Input('viz1_choice', 'value')]
-)
+    [Output('tr_viz1', 'style'),
+     Output('tr_viz2', 'style'),
+     Output('tr_viz3', 'style')],
+    [Input('viz4_choice_action', 'value')]
+)    
+def set_tr_viz4(value):
+    if value=='viz1':
+        return {}, {'display': 'none'}, {'display': 'none'}
+    elif value=='viz2':
+        return {'display': 'none'}, {}, {'display': 'none'}
+    elif value=='viz3':
+        return {'display': 'none'}, {'display': 'none'}, {}
+
+# Définir le graphique de la 1e viz en fonction du choix de vin fait par l'utilisateur :
 def set_viz1_result(value):
     DF_data = DF_viz1_data.merge(DF_viz1_choice.loc[[value]])
     DF_data = DF_data[['millesime', 'cote_2020']].sort_values(by=['millesime'])
-
-    table_display = False
-    if table_display:
-        children = DataTable(
-            id='viz1_table',
-            columns=[{"name": col, "id": col} for col in DF_data.columns],
-            data=DF_data.to_dict('records')
-        )
-    else:
-        fig = px.scatter(DF_data, x='millesime', y='cote_2020', trendline='ols', trendline_color_override='lightgrey')
-        fig.update_traces(selector=dict(mode="markers"), mode="lines+markers", marker = go.scatter.Marker(symbol='hexagon-dot', size=8))
-        fig.update_layout(showlegend=False)
-        fig.update_xaxes(title_text=lang['vintage'])
-        fig.update_yaxes(title_text=lang['price'])
-        children = dcc.Graph(id='viz1-graph', figure=fig)
+    fig = px.scatter(DF_data, x='millesime', y='cote_2020', trendline='ols', trendline_color_override='lightgrey')
+    fig.update_traces(selector=dict(mode="markers"), mode="lines+markers", marker = go.scatter.Marker(symbol='hexagon-dot', size=8))
+    fig.update_layout(showlegend=False)
+    fig.update_xaxes(title_text=lang['vintage'])
+    fig.update_yaxes(title_text=lang['price'])
+    children = [
+        html.H4([lang['viz1_desc'], html.A('idealwine.com', href='https://www.idealwine.com'), " :"]),
+        dcc.Graph(id='viz1-graph', figure=fig)
+    ]
     return children
 
-# Actualiser le graphique du 2e onglet en fonction du choix d'appellation fait par l'utilisateur :
-@app.callback(
-    Output('viz2_result', 'children'),
-    [Input('viz2_choice', 'value')]
-)
+# Définir le graphique de la 2e viz en fonction du choix d'appellation fait par l'utilisateur :
 def set_viz2_result(value):
     DF_data = DF_viz2_data[DF_viz2_data.appellation==value].sort_values(by=['millesime'])
     fig = px.scatter(DF_data, x='millesime', y='cote_2020')
@@ -289,14 +277,13 @@ def set_viz2_result(value):
     fig.update_layout(showlegend=False)
     fig.update_xaxes(title_text=lang['vintage'])
     fig.update_yaxes(title_text=lang['avg_price'])
-    children = dcc.Graph(id='viz2-graph', figure=fig)
+    children = [
+        html.H4([lang['viz2_desc']]),
+        dcc.Graph(id='viz2-graph', figure=fig)
+    ]    
     return children
 
-# Actualiser le graphique du 3e onglet en fonction du choix d'appellation fait par l'utilisateur :
-@app.callback(
-    Output('viz3_result', 'children'),
-    [Input('viz3_choice', 'value')]
-)
+# Définir le graphique de la 2e viz en fonction du choix d'appellation fait par l'utilisateur :
 def set_viz3_result(value):
     DF_data = DF_viz3_data[DF_viz3_data.appellation==value].melt(id_vars=L_col_id, value_vars=L_col_cote, var_name='annee_cote', value_name='cote').reset_index()
     DF_data['annee_cote'] = DF_data['annee_cote'].apply(lambda s: re.sub(r"^cote_", "", s))
@@ -316,8 +303,27 @@ def set_viz3_result(value):
     fig.update_yaxes(title_text=lang['max_price_allvint'])
     fig.update_xaxes(range=[DF_data.cote_moy.min()-0.05*(DF_data.cote_moy.max()-DF_data.cote_moy.min()), DF_data.cote_moy.max()+0.05*(DF_data.cote_moy.max()-DF_data.cote_moy.min())])
     fig.update_yaxes(range=[DF_data.cote_max.min()-0.05*(DF_data.cote_max.max()-DF_data.cote_max.min()), 1.05*DF_data.cote_max.max()+0.05*(DF_data.cote_max.max()-DF_data.cote_max.min())])
-    children = dcc.Graph(id='viz3-graph', figure=fig)
+    children = [
+        html.H4([lang['viz3_desc']]),
+        dcc.Graph(id='viz3-graph', figure=fig)
+    ]
     return children
+
+# Actualiser le contenu de l'onglet de visualisation :
+@app.callback(
+    Output('viz4_result', 'children'),
+    [Input('viz4_choice_action', 'value'),
+     Input('viz1_choice', 'value'),
+     Input('viz2_choice', 'value'),
+     Input('viz3_choice', 'value')]
+)
+def set_viz4_result(value_choice_action, value_viz1, value_viz2, value_viz3):
+    if value_choice_action=='viz1':
+        return set_viz1_result(value_viz1)
+    elif value_choice_action=='viz2':
+        return set_viz2_result(value_viz2)
+    elif value_choice_action=='viz3':
+        return set_viz3_result(value_viz3)
 
 # Actualiser la sélection aléatoire de vins proposés en fonction du modèle choisi dans les onglets de prédiction :
 def set_random_wine_choice(DF_ideal_pred):
@@ -352,7 +358,6 @@ def set_random_wine_choice_viz6(value):
     else:
         DF_ideal_pred = DF_ideal_pred_xg_2020
     return set_random_wine_choice(DF_ideal_pred)
-
 
 # Pour les onglets de prédiction, actualiser les choix proposés à l'utilisateur en fonction de l'action qu'il a choisie :
 def set_tr(value):

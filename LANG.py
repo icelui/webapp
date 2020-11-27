@@ -1,8 +1,7 @@
 fr = {
     'title': "La cote des grands vins français",
-    'viz1': "Visualisation n°1",
-    'viz2': "Visualisation n°2",
-    'viz3': "Visualisation n°3",
+    'viz0': "Informations",
+    'viz4': "Visualisations",
     'viz5': "Prédiction 2015 (test)",
     'viz6': "Prédiction 2020",
     
@@ -38,9 +37,10 @@ fr = {
     'see_pred': "Visualiser la prédiction de cote dans 5 ans pour quelques vins de la base",
     'get_reco_test': "Obtenir et évaluer une recommandation d'investissement",
 
-    'title_viz1': "Commençons par une visualisation simple...",
-    'title_viz2': "Qualité des millésimes",
-    'title_viz3': "Un peu d'animation...",
+    'title_viz1': "Voir la variation de cote (actuelle) de quelques vins en fonction du millésime",
+    'title_viz2': "Voir la variation de cote moyenne d'une appellation en fonction du millésime",
+    'title_viz3': "Voir l'évolution temporelle du prix des grands vins d'une appellation",
+    'title_viz4': "Je propose ici quelques exemples de visualisation sur les données collectées...",
     'title_viz5': "Modèles prédictifs '2015' (pour tester la validité des prédictions)",
     'title_viz6': "Modèles prédictifs '2020' (pour vous aider à investir aujourd'hui)",
 
@@ -58,10 +58,39 @@ fr = {
                     les cotes de la dernière année disponible, soit 2020 ; en variables explicatives, les données disponibles
                     5 ans avant, soit en 2015. Le modèle entraîné est ensuite utilisé pour prédire les cotes 
                     en 2025, à partir des données disponibles en 2020. De ces prédictions est déduite une recommandation
-                    d'investissement."""
+                    d'investissement.""",
 
+    'info': '''
+               #### Technologies utilisées pour réaliser ce site :
+               Pour la partie web : Python, [Anaconda](https://www.anaconda.com/), [Dash](https://plotly.com/dash/),
+               [Plotly Graphing Libraries](https://plotly.com/graphing-libraries/), [Heroku](https://heroku.com/) et
+               [Git](https://git-scm.com/) pour la publication.
 
+               Pour la collecte et la préparation des données : Python, Anaconda, [Scrapy](https://scrapy.org/) et [Pandas](https://pandas.pydata.org/).
 
+               Pour le _machine learning_ et le _deep learning_ : [Numpy](https://numpy.org/), [Scikit-Learn](https://scikit-learn.org/), 
+               [XGBoost](https://xgboost.readthedocs.io/), [Tensorflow](https://www.tensorflow.org/) et [Keras](https://keras.io/).
+
+               Pour ouvrir les bouteilles : un tire-bouchon à [double levier](https://images-na.ssl-images-amazon.com/images/I/417Oc0h5b9L._AC_.jpg), toujours ! 
+
+               #### Origine des données :
+               Toute les données utilisées ici ont été collectées sur le site [Idealwine](https://www.idealwine.com), qui est une
+               référence en matière d'estimation de prix ("cote") des grands vins français.
+
+               #### Choix d'implémentation :
+               Les modèles prédictifs, pour prédire la cote future d'un millésime donné d'un vin donné, s'appuient uniquement sur des données disponibles 5 ans plus tôt.
+               Il s'agit non seulement de données connues pour ce vin millésimé, mais également de données (moyennes ou maximales) connues pour l'ensemble des millésimes du
+               même vin, pour l'ensemble des vins du même domaine, et enfin pour l'ensemble des vins de la même appellation.
+
+               Pour les modèles prédictifs ne recourant pas aux réseaux de neurones (_deep learning_), plusieurs techniques de régression ont été testées et optimisées :
+               régression linéaire, machines à vecteurs de support (SVM), forêt aléatoire (random forest) "classiques", forêt aléatoire "boostée" par XGBoost. Après
+               recherche des paramètres optimaux pour chacune de ces solutions, c'est la dernière qui s'est avérée la plus performante en termes de recommandations 
+               d'investissement, et qui a donc été publiée sur ce site. 
+
+               Pour les modèles de _deep learning_, un réseau non séquentiel permet d'utiliser des couches de neurones récurrents (LSTM) pour traiter les séries temporelles,
+               et de combiner les sorties de ces couches avec celles de couches "denses" utilisées pour les variables explicatives non séquentielles.
+            '''
+                                 
 
 }
 

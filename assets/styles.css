@@ -87,12 +87,12 @@ td {
 }
 
 .main-tabs {
-    width: 960px;
+    width: 570px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
     .main-tabs {
-        width: 96%;
+        width: 95%;
     }
 }
 
@@ -154,10 +154,10 @@ td {
 }
 
 .viz-dropdown-large {
-    width: 540px !important;
+    width: 900px !important;
     text-align: left;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1200px) {
     .viz1-dropdown-large {
         width: 75vw !important;
         text-align: left;
