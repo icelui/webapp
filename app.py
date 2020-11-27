@@ -21,8 +21,9 @@ DECIMAL_SEPARATOR = ','
 # PREPARATION DES DONNEES (indépendante des actions du client) :
 
 DF_ideal = pd.read_csv("data/idealwine.csv")
-DF_ideal_pred_2015 = pd.read_csv("data/idealwine_pred_2015_2020.csv")
-DF_ideal_pred_2020 = pd.read_csv("data/idealwine_pred_2020_2025.csv")
+DF_ideal_pred_xg_2015 = pd.read_csv("data/idealwine_pred_2015_2020.csv")
+DF_ideal_pred_tf_2015 = pd.read_csv("data/idealwine_pred_tf_2015_2020.csv")
+DF_ideal_pred_xg_2020 = pd.read_csv("data/idealwine_pred_2020_2025.csv")
 
 DF_viz1_data = DF_ideal[DF_ideal.millesime>=1982].copy()
 DF_viz1_choice = DF_viz1_data.groupby(['pays_region', 'domaine', 'appellation', 'nom_du_vin', 'couleur'], as_index=False)['cote_2020'].count()
@@ -44,12 +45,8 @@ DF_viz3_data = DF_ideal[DF_ideal.millesime>=1990][L_col_id + L_col_cote].dropna(
 DF_temp = DF_viz3_data.groupby(["appellation", "nom_du_vin"], as_index=False).first()[["appellation", "nom_du_vin"]].groupby("appellation", as_index=False).count()
 DF_viz3_choice = DF_temp[DF_temp["nom_du_vin"]>4][["appellation"]].sort_values(by='appellation')
 
-DF_viz4_data = DF_ideal_pred_2015
+DF_viz4_data = DF_ideal_pred_xg_2015
 DF_viz4_choice = DF_viz4_data[['pays_region', 'domaine', 'appellation', 'nom_du_vin', 'couleur', 'millesime']]
-
-DF_viz5_data = DF_ideal_pred_2015
-
-DF_viz6_data = DF_ideal_pred_2020
 
 """ # S'arrêter là si besoin pour débugguer :
 sys.exit() """
@@ -178,21 +175,31 @@ app.layout = html.Div(className='main', children=[
                     className='div-tab',
                     children=[
                         html.H3(lang['title_viz5']),
-                        # html.H4([lang['viz5_desc']]),
-                        html.Table(className='table-center', children=[
-                            html.Tbody(html.Tr(children=[
-                                html.Td(children=html.H5(lang['choose_number'])),
-                                html.Td(children=[
-                                    dcc.Dropdown(
-                                        id='viz5_choice',
-                                        className='viz-dropdown-small',
-                                        multi=False,
-                                        options=[{'label': n, 'value': n} for n in np.arange(5, 55, 5)],
-                                        value=20
-                                    )
-                                ])
-                            ]))
-                        ]),
+                        html.Table(className='table-center', children=[html.Tbody([
+                            html.Tr(children=[
+                                html.Td(children=html.H6(lang['choose_model'])),
+                                html.Td(children=[dcc.Dropdown(
+                                    id='viz5_choice_model',
+                                    className='viz-dropdown-large',
+                                    multi=False,
+                                    options=[
+                                        {'label': lang['xgboost'], 'value': 'xg'},
+                                        {'label': lang['tensorflow'], 'value': 'tf'}
+                                    ],
+                                    value='xg'
+                                )])
+                            ]),
+                            html.Tr(children=[
+                                html.Td(children=html.H6(lang['choose_number'])),
+                                html.Td(children=[dcc.Dropdown(
+                                    id='viz5_choice_nbwines',
+                                    className='viz-dropdown-small',
+                                    multi=False,
+                                    options=[{'label': n, 'value': n} for n in np.arange(5, 55, 5)],
+                                    value=20
+                                )])
+                            ])
+                        ])]),
                         html.Div(id='viz5_result', className='viz-result')
                     ]
                 )]
@@ -208,7 +215,6 @@ app.layout = html.Div(className='main', children=[
                     className='div-tab',
                     children=[
                         html.H3(lang['title_viz6']),
-                        # html.H4([lang['viz6_desc']]),
                         html.Table(className='table-center', children=[
                             html.Tbody(html.Tr(children=[
                                 html.Td(children=html.H5(lang['choose_number'])),
@@ -384,7 +390,7 @@ def set_viz4_result(value):
     children = dcc.Graph(id='viz4-graph', figure=fig)
     return children
 
-def set_reco_result(value, DF_data=DF_viz5_data, year=2015, delta=5):
+def set_reco_result(value, DF_data, year=2015, delta=5):
     nb_domaines = value
     DF_invest = DF_data.sort_values(by=['pred_infl'], ascending=False)
     DF_invest = DF_invest.reset_index().groupby(['pays_region', 'domaine']).first().reset_index().set_index('index')
@@ -442,10 +448,14 @@ def set_reco_result(value, DF_data=DF_viz5_data, year=2015, delta=5):
 
 @app.callback(
     Output('viz5_result', 'children'),
-    [Input('viz5_choice', 'value')]
+    [Input('viz5_choice_model', 'value'), Input('viz5_choice_nbwines', 'value')]
 )
-def set_viz5_result(value):
-    children = set_reco_result(value, DF_data=DF_viz5_data, year=2015, delta=5)
+def set_viz5_result(value_model, value_nbwines):
+    if value_model=='tf':
+        DF_viz5_data = DF_ideal_pred_tf_2015
+    else:
+        DF_viz5_data = DF_ideal_pred_xg_2015
+    children = set_reco_result(value_nbwines, DF_data=DF_viz5_data, year=2015, delta=5)
     return children
 
 @app.callback(
@@ -453,6 +463,7 @@ def set_viz5_result(value):
     [Input('viz6_choice', 'value')]
 )
 def set_viz6_result(value):
+    DF_viz6_data = DF_ideal_pred_xg_2020
     children = set_reco_result(value, DF_data=DF_viz6_data, year=2020, delta=5)
     return children
 

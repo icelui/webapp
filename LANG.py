@@ -22,6 +22,7 @@ fr = {
     'known_in': "Cotes utilisées par le modèle prédictif, car connues en",
     'unknown_in': "Cotes non utilisées par le modèle prédictif, car inconnues en",
     'choose_number': "Choisissez le nombre de vins (de domaines différents) de votre portefeuille d'investissement :",
+    'choose_model': "Choisissez un modèle prédictif :",
     'infl_avg_01': "L'inflation moyenne des vins, entre ",
     'infl_avg_02': " et ",
     'infl_avg_03': ", sur l'ensemble des vins faisant l'objet d'une prédiction, est de",
@@ -32,6 +33,8 @@ fr = {
     'appellation': "Appellation",
     'domain': "Domaine", 
     'color': "Couleur",
+    'xgboost': "Forêts aléatoires (random forests) boostées par la technologie XGBoost",
+    'tensorflow': "Réseau de neurones denses et récurrents entraîné avec Tensorflow",
 
     'title_viz1': "Commençons par une visualisation simple...",
     'title_viz2': "Qualité des millésimes",
