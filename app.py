@@ -54,7 +54,11 @@ sys.exit() """
 #####################################################################
 # FONCTIONS DE GENERATION INITIALE DE CONTENU (hors callbacks) :
 
-def get_prediction_tab(vizname):
+def get_prediction_tab(vizname, with_tf=True):
+    options = [{'label': lang['xgboost'], 'value': 'xg'}]
+    if with_tf:
+        options = options + [{'label': lang['tensorflow'], 'value': 'tf'}]
+
     return dcc.Tab(              
         id='tab-'+vizname,
         value='tab-'+vizname,
@@ -74,10 +78,7 @@ def get_prediction_tab(vizname):
                             id=vizname+'_choice_model',
                             className='viz-dropdown-large',
                             multi=False,
-                            options=[
-                                {'label': lang['xgboost'], 'value': 'xg'},
-                                {'label': lang['tensorflow'], 'value': 'tf'}
-                            ],
+                            options=options,
                             value='xg'
                         )])
                     ]),
@@ -210,7 +211,7 @@ app.layout = html.Div(className='main', children=[
                 )]
             ), 
             get_prediction_tab('viz5'),
-            get_prediction_tab('viz6')
+            get_prediction_tab('viz6', with_tf=False)
         ]
     )
 ])

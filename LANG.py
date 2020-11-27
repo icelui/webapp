@@ -35,7 +35,7 @@ fr = {
     'xgboost': "Forêts aléatoires (random forests) boostées par la technologie XGBoost",
     'tensorflow': "Réseau de neurones denses et récurrents (LSTM) entraîné avec Tensorflow",
     'see_pred': "Visualiser la prédiction de cote dans 5 ans pour quelques vins de la base",
-    'get_reco_test': "Obtenir et évaluer une recommandation d'investissement",
+    'get_reco_test': "Obtenir une recommandation d'investissement",
 
     'title_viz1': "Voir la variation de cote (actuelle) de quelques vins en fonction du millésime",
     'title_viz2': "Voir la variation de cote moyenne d'une appellation en fonction du millésime",
