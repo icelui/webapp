@@ -17,6 +17,7 @@ import LANG
 lang = LANG.fr
 DECIMAL_SEPARATOR = ','
 
+
 #####################################################################
 # PREPARATION DES DONNEES (indépendante des actions du client) :
 
@@ -24,7 +25,7 @@ DF_ideal = pd.read_csv("data/idealwine.csv")
 DF_ideal_pred_xg_2015 = pd.read_csv("data/idealwine_pred_2015_2020.csv")
 DF_ideal_pred_tf_2015 = pd.read_csv("data/idealwine_pred_tf_2015_2020.csv")
 DF_ideal_pred_xg_2020 = pd.read_csv("data/idealwine_pred_2020_2025.csv")
-DF_ideal_pred_tf_2020 = pd.read_csv("data/idealwine_pred_2020_2025.csv")  # Nom de fichier à corriger lorsque disponible
+DF_ideal_pred_tf_2020 = pd.read_csv("data/idealwine_pred_tf_2020_2025.csv")
 
 DF_viz1_data = DF_ideal[DF_ideal.millesime>=1982].copy()
 DF_viz1_choice = DF_viz1_data.groupby(['pays_region', 'domaine', 'appellation', 'nom_du_vin', 'couleur'], as_index=False)['cote_2020'].count()
@@ -46,7 +47,7 @@ DF_viz3_data = DF_ideal[DF_ideal.millesime>=1990][L_col_id + L_col_cote].dropna(
 DF_temp = DF_viz3_data.groupby(["appellation", "nom_du_vin"], as_index=False).first()[["appellation", "nom_du_vin"]].groupby("appellation", as_index=False).count()
 DF_viz3_choice = DF_temp[DF_temp["nom_du_vin"]>4][["appellation"]].sort_values(by='appellation')
 
-""" # S'arrêter là si besoin pour débugguer :
+""" # On peut s'arrêter là si besoin pour débugguer :
 sys.exit() """
 
 
@@ -211,7 +212,7 @@ app.layout = html.Div(className='main', children=[
                 )]
             ), 
             get_prediction_tab('viz5'),
-            get_prediction_tab('viz6', with_tf=False)
+            get_prediction_tab('viz6', with_tf=True)
         ]
     )
 ])

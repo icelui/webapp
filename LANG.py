@@ -61,18 +61,6 @@ fr = {
                     d'investissement.""",
 
     'info': '''
-               #### Technologies utilisées pour réaliser ce site :
-               Pour la partie web : Python, [Anaconda](https://www.anaconda.com/), [Dash](https://plotly.com/dash/),
-               [Plotly Graphing Libraries](https://plotly.com/graphing-libraries/), [Heroku](https://heroku.com/) et
-               [Git](https://git-scm.com/) pour la publication.
-
-               Pour la collecte et la préparation des données : Python, Anaconda, [Scrapy](https://scrapy.org/) et [Pandas](https://pandas.pydata.org/).
-
-               Pour le _machine learning_ et le _deep learning_ : [Numpy](https://numpy.org/), [Scikit-Learn](https://scikit-learn.org/), 
-               [XGBoost](https://xgboost.readthedocs.io/), [Tensorflow](https://www.tensorflow.org/) et [Keras](https://keras.io/).
-
-               Pour ouvrir les bouteilles : un tire-bouchon à [double levier](https://images-na.ssl-images-amazon.com/images/I/417Oc0h5b9L._AC_.jpg), toujours ! 
-
                #### Origine des données :
                Toute les données utilisées ici ont été collectées sur le site [Idealwine](https://www.idealwine.com), qui est une
                référence en matière d'estimation de prix ("cote") des grands vins français.
@@ -89,6 +77,18 @@ fr = {
 
                Pour les modèles de _deep learning_, un réseau non séquentiel permet d'utiliser des couches de neurones récurrents (LSTM) pour traiter les séries temporelles,
                et de combiner les sorties de ces couches avec celles de couches "denses" utilisées pour les variables explicatives non séquentielles.
+
+               #### Technologies utilisées pour réaliser ce site :
+               Pour la partie web : Python, [Anaconda](https://www.anaconda.com/), [Dash](https://plotly.com/dash/),
+               [Plotly Graphing Libraries](https://plotly.com/graphing-libraries/), [Heroku](https://heroku.com/) et
+               [Git](https://git-scm.com/) pour la publication.
+
+               Pour la collecte et la préparation des données : Python, Anaconda, [Scrapy](https://scrapy.org/) et [Pandas](https://pandas.pydata.org/).
+
+               Pour le _machine learning_ et le _deep learning_ : [Numpy](https://numpy.org/), [Scikit-Learn](https://scikit-learn.org/), 
+               [XGBoost](https://xgboost.readthedocs.io/), [Tensorflow](https://www.tensorflow.org/) et [Keras](https://keras.io/).
+
+               Pour ouvrir les bouteilles : un tire-bouchon à [double levier](https://images-na.ssl-images-amazon.com/images/I/417Oc0h5b9L._AC_.jpg), toujours ! 
 
                #### Améliorations en cours de développement :
                Amélioration des prédictions grâce à des données supplémentaires d'évaluation des domaines et des vins, collectées sur le site de la
