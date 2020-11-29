@@ -440,7 +440,7 @@ def set_pred_viz(value, DF_data, year, delta=5):
     return children
 
 # Fonction de construction de la recommandation d'investissement, commune aux onglets de prédiction :
-def set_reco_result(value, DF_data, year=2015, delta=5):
+def set_reco_result(value, DF_data, year=2015, delta=5, with_target=False):
     nb_domaines = value
     DF_invest = DF_data.sort_values(by=['pred_infl'], ascending=False)
     DF_invest = DF_invest.reset_index().groupby(['pays_region', 'domaine']).first().reset_index().set_index('index')
@@ -451,8 +451,14 @@ def set_reco_result(value, DF_data, year=2015, delta=5):
         invest_avg = DF_invest.cible.mean()
         ratio_avg = invest_avg / infl_avg
 
+    if with_target:
+        DF_invest = DF_invest[['pays_region', 'domaine', 'nom_du_vin', 'appellation', 'couleur', 'millesime', 'cible']]
+        DF_invest[lang['inflation']+' '+str(year)+'-'+str(year+delta)] = DF_invest['cible'].apply(lambda v: "{:.0%}".format(v))
+        DF_invest = DF_invest.drop(columns=['cible'])
+    else:
+        DF_invest = DF_invest[['pays_region', 'domaine', 'nom_du_vin', 'appellation', 'couleur', 'millesime']]
+ 
     # Pour optimiser l'affichage :
-    DF_invest = DF_invest[['pays_region', 'domaine', 'nom_du_vin', 'appellation', 'couleur', 'millesime']]
     DF_invest = DF_invest.rename(
         {
             'pays_region': lang['region'],
@@ -510,7 +516,7 @@ def set_viz5_result(value_model, value_action, value_nbwines, value_wine):
         DF_data = DF_ideal_pred_xg_2015
 
     if value_action=='reco':
-        children = set_reco_result(value_nbwines, DF_data=DF_data, year=2015, delta=5)
+        children = set_reco_result(value_nbwines, DF_data=DF_data, year=2015, delta=5, with_target=True)
     else:
         children = set_pred_viz(value_wine, DF_data=DF_data, year=2015, delta=5)
     return children
@@ -530,7 +536,7 @@ def set_viz6_result(value_model, value_action, value_nbwines, value_wine):
         DF_data = DF_ideal_pred_xg_2020
 
     if value_action=='reco':
-        children = set_reco_result(value_nbwines, DF_data=DF_data, year=2020, delta=5)
+        children = set_reco_result(value_nbwines, DF_data=DF_data, year=2020, delta=5, with_target=False)
     else:
         children = set_pred_viz(value_wine, DF_data=DF_data, year=2020, delta=5)
     return children
