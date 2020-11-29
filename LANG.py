@@ -7,7 +7,8 @@ fr = {
     
     'in_progress': "En construction",
     
-    'choose_wine': "Choisissez un vin parmi cette sélection aléatoire :",
+    'choose_wine_alea': "Choisissez un vin parmi cette sélection aléatoire :",
+    'choose_wine': "Choisissez un vin :",
     'choose_appellation': "Choisissez une appellation :",
     'vintage': "Millésime",
     'price': "Cote en euros (bouteille de 75 cL)",
@@ -40,7 +41,8 @@ fr = {
 
     'title_viz1': "Voir la variation de cote (actuelle) de quelques vins en fonction du millésime",
     'title_viz2': "Voir la variation de cote moyenne d'une appellation en fonction du millésime",
-    'title_viz3': "Voir l'évolution temporelle du prix des grands vins d'une appellation",
+    'title_viz3': "Voir l'évolution temporelle de la cote des grands vins d'une appellation",
+    'title_viz3a': "Voir l'évolution temporelle de la cote des vins de plus forte inflation entre 2015 et 2020",
     'title_viz4': "Je propose ici quelques exemples de visualisation sur les données collectées...",
     'title_viz5': "Modèles prédictifs '2015' (pour tester la validité des prédictions)",
     'title_viz6': "Modèles prédictifs '2020' (pour vous aider à investir aujourd'hui)",

@@ -1,0 +1,319 @@
+index,appellation,domaine,nom_du_vin,couleur,millesime,annee_cote,cote
+0,Pomerol,Château Certan de May,Château Certan de May,Rouge,2005,2014,5.0
+0,Pomerol,Château Certan de May,Château Certan de May,Rouge,2005,2015,5.66
+0,Pomerol,Château Certan de May,Château Certan de May,Rouge,2005,2016,5.9
+0,Pomerol,Château Certan de May,Château Certan de May,Rouge,2005,2017,79.0
+0,Pomerol,Château Certan de May,Château Certan de May,Rouge,2005,2018,81.13
+0,Pomerol,Château Certan de May,Château Certan de May,Rouge,2005,2019,93.23
+0,Pomerol,Château Certan de May,Château Certan de May,Rouge,2005,2020,93.16
+1,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2010,2012,50.0
+1,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2010,2013,54.65
+1,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2010,2014,58.68
+1,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2010,2015,62.87
+1,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2010,2016,68.81
+1,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2010,2017,75.73
+1,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2010,2018,486.0
+1,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2010,2019,535.04
+1,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2010,2020,565.02
+2,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,1996,2013,144.0
+2,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,1996,2014,180.0
+2,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,1996,2015,163.67
+2,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,1996,2016,175.67
+2,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,1996,2017,191.76
+2,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,1996,2018,198.38
+2,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,1996,2019,1081.0
+2,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,1996,2020,1160.75
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2006,42.0
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2007,29.5
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2008,29.78
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2009,28.0
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2010,30.42
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2011,34.68
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2012,33.52
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2013,33.6
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2014,32.46
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2015,36.11
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2016,40.05
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2017,42.08
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2018,133.46
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2019,194.56
+3,Côtes du Rhône,Château de Fonsalette,Côtes du Rhône Cuvée Syrah Château de Fonsalette,Rouge,1998,2020,251.74
+4,Vin de France,Richard Leroy,Vin de France Les Noëls de Montbenault Richard Leroy,Blanc,2010,2015,26.0
+4,Vin de France,Richard Leroy,Vin de France Les Noëls de Montbenault Richard Leroy,Blanc,2010,2016,31.3
+4,Vin de France,Richard Leroy,Vin de France Les Noëls de Montbenault Richard Leroy,Blanc,2010,2017,34.15
+4,Vin de France,Richard Leroy,Vin de France Les Noëls de Montbenault Richard Leroy,Blanc,2010,2018,134.0
+4,Vin de France,Richard Leroy,Vin de France Les Noëls de Montbenault Richard Leroy,Blanc,2010,2019,139.84
+4,Vin de France,Richard Leroy,Vin de France Les Noëls de Montbenault Richard Leroy,Blanc,2010,2020,178.06
+5,Vin de France,Richard Leroy,Vin de France Les Noëls de Montbenault Richard Leroy,Blanc,2009,2015,20.0
+5,Vin de France,Richard Leroy,Vin de France Les Noëls de Montbenault Richard Leroy,Blanc,2009,2016,22.94
+5,Vin de France,Richard Leroy,Vin de France Les Noëls de Montbenault Richard Leroy,Blanc,2009,2017,70.0
+5,Vin de France,Richard Leroy,Vin de France Les Noëls de Montbenault Richard Leroy,Blanc,2009,2018,100.25
+5,Vin de France,Richard Leroy,Vin de France Les Noëls de Montbenault Richard Leroy,Blanc,2009,2019,139.84
+5,Vin de France,Richard Leroy,Vin de France Les Noëls de Montbenault Richard Leroy,Blanc,2009,2020,135.08
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2006,425.0
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2007,443.26
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2008,759.75
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2009,649.0
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2010,657.82
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2011,740.88
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2012,851.84
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2013,889.07
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2014,954.79
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2015,1139.94
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2016,1218.59
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2017,1390.11
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2018,6217.8
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2019,6699.71
+6,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2000,2020,7439.64
+7,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2009,2012,65.0
+7,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2009,2013,69.55
+7,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2009,2014,71.7
+7,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2009,2015,76.45
+7,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2009,2016,83.85
+7,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2009,2017,92.19
+7,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2009,2018,457.0
+7,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2009,2019,486.4
+7,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2009,2020,491.2
+8,Chambertin Clos de Bèze,Prieuré Roch,Chambertin Clos de Bèze Grand Cru Prieuré Roch,Rouge,2007,2015,218.0
+8,Chambertin Clos de Bèze,Prieuré Roch,Chambertin Clos de Bèze Grand Cru Prieuré Roch,Rouge,2007,2016,238.19
+8,Chambertin Clos de Bèze,Prieuré Roch,Chambertin Clos de Bèze Grand Cru Prieuré Roch,Rouge,2007,2017,272.84
+8,Chambertin Clos de Bèze,Prieuré Roch,Chambertin Clos de Bèze Grand Cru Prieuré Roch,Rouge,2007,2018,288.0
+8,Chambertin Clos de Bèze,Prieuré Roch,Chambertin Clos de Bèze Grand Cru Prieuré Roch,Rouge,2007,2019,1311.0
+8,Chambertin Clos de Bèze,Prieuré Roch,Chambertin Clos de Bèze Grand Cru Prieuré Roch,Rouge,2007,2020,1350.8
+9,Auxey-Duresses,Domaine d'Auvenay,Auxey-Duresses Les Clous d'Auvenay,Blanc,2005,2012,157.5
+9,Auxey-Duresses,Domaine d'Auvenay,Auxey-Duresses Les Clous d'Auvenay,Blanc,2005,2013,164.38
+9,Auxey-Duresses,Domaine d'Auvenay,Auxey-Duresses Les Clous d'Auvenay,Blanc,2005,2014,184.46
+9,Auxey-Duresses,Domaine d'Auvenay,Auxey-Duresses Les Clous d'Auvenay,Blanc,2005,2015,204.58
+9,Auxey-Duresses,Domaine d'Auvenay,Auxey-Duresses Les Clous d'Auvenay,Blanc,2005,2016,221.63
+9,Auxey-Duresses,Domaine d'Auvenay,Auxey-Duresses Les Clous d'Auvenay,Blanc,2005,2017,242.03
+9,Auxey-Duresses,Domaine d'Auvenay,Auxey-Duresses Les Clous d'Auvenay,Blanc,2005,2018,669.9
+9,Auxey-Duresses,Domaine d'Auvenay,Auxey-Duresses Les Clous d'Auvenay,Blanc,2005,2019,729.6
+9,Auxey-Duresses,Domaine d'Auvenay,Auxey-Duresses Les Clous d'Auvenay,Blanc,2005,2020,1264.84
+10,Cornas,Thierry Allemand,Cornas Thierry Allemand,Rouge,2003,2009,19.17
+10,Cornas,Thierry Allemand,Cornas Thierry Allemand,Rouge,2003,2010,19.82
+10,Cornas,Thierry Allemand,Cornas Thierry Allemand,Rouge,2003,2011,20.2
+10,Cornas,Thierry Allemand,Cornas Thierry Allemand,Rouge,2003,2012,21.68
+10,Cornas,Thierry Allemand,Cornas Thierry Allemand,Rouge,2003,2013,20.86
+10,Cornas,Thierry Allemand,Cornas Thierry Allemand,Rouge,2003,2014,23.5
+10,Cornas,Thierry Allemand,Cornas Thierry Allemand,Rouge,2003,2015,24.41
+10,Cornas,Thierry Allemand,Cornas Thierry Allemand,Rouge,2003,2016,115.0
+10,Cornas,Thierry Allemand,Cornas Thierry Allemand,Rouge,2003,2017,118.97
+10,Cornas,Thierry Allemand,Cornas Thierry Allemand,Rouge,2003,2018,145.92
+10,Cornas,Thierry Allemand,Cornas Thierry Allemand,Rouge,2003,2019,145.92
+10,Cornas,Thierry Allemand,Cornas Thierry Allemand,Rouge,2003,2020,149.39
+11,Meursault,Roulot ,Meursault 1er Cru Perrières Roulot,Blanc,2007,2010,106.0
+11,Meursault,Roulot ,Meursault 1er Cru Perrières Roulot,Blanc,2007,2011,114.72
+11,Meursault,Roulot ,Meursault 1er Cru Perrières Roulot,Blanc,2007,2012,125.02
+11,Meursault,Roulot ,Meursault 1er Cru Perrières Roulot,Blanc,2007,2013,128.99
+11,Meursault,Roulot ,Meursault 1er Cru Perrières Roulot,Blanc,2007,2014,139.05
+11,Meursault,Roulot ,Meursault 1er Cru Perrières Roulot,Blanc,2007,2015,159.45
+11,Meursault,Roulot ,Meursault 1er Cru Perrières Roulot,Blanc,2007,2016,174.21
+11,Meursault,Roulot ,Meursault 1er Cru Perrières Roulot,Blanc,2007,2017,199.55
+11,Meursault,Roulot ,Meursault 1er Cru Perrières Roulot,Blanc,2007,2018,437.0
+11,Meursault,Roulot ,Meursault 1er Cru Perrières Roulot,Blanc,2007,2019,924.16
+11,Meursault,Roulot ,Meursault 1er Cru Perrières Roulot,Blanc,2007,2020,949.65
+12,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2008,2012,130.0
+12,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2008,2013,138.65
+12,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2008,2014,150.53
+12,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2008,2015,167.09
+12,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2008,2016,179.94
+12,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2008,2017,200.68
+12,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2008,2018,211.67
+12,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2008,2019,911.0
+12,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2008,2020,939.97
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2005,432.0
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2006,476.23
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2007,486.62
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2008,510.98
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2009,499.17
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2010,524.57
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2011,551.18
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2012,637.63
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2013,659.35
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2014,700.19
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2015,841.85
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2016,903.6
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2017,986.38
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2018,4128.0
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2019,4262.0
+13,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1996,2020,4727.8
+14,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2002,2015,223.0
+14,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2002,2016,248.09
+14,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2002,2017,266.47
+14,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2002,2018,296.27
+14,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2002,2019,1211.0
+14,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2002,2020,1228.2
+15,Echézeaux,René Engel - domaine d'Eugénie,Echézeaux Grand Cru René Engel - Eugénie,Rouge,1998,2007,64.67
+15,Echézeaux,René Engel - domaine d'Eugénie,Echézeaux Grand Cru René Engel - Eugénie,Rouge,1998,2008,67.82
+15,Echézeaux,René Engel - domaine d'Eugénie,Echézeaux Grand Cru René Engel - Eugénie,Rouge,1998,2009,65.82
+15,Echézeaux,René Engel - domaine d'Eugénie,Echézeaux Grand Cru René Engel - Eugénie,Rouge,1998,2010,66.38
+15,Echézeaux,René Engel - domaine d'Eugénie,Echézeaux Grand Cru René Engel - Eugénie,Rouge,1998,2011,74.23
+15,Echézeaux,René Engel - domaine d'Eugénie,Echézeaux Grand Cru René Engel - Eugénie,Rouge,1998,2012,87.58
+15,Echézeaux,René Engel - domaine d'Eugénie,Echézeaux Grand Cru René Engel - Eugénie,Rouge,1998,2013,91.39
+15,Echézeaux,René Engel - domaine d'Eugénie,Echézeaux Grand Cru René Engel - Eugénie,Rouge,1998,2014,102.38
+15,Echézeaux,René Engel - domaine d'Eugénie,Echézeaux Grand Cru René Engel - Eugénie,Rouge,1998,2015,116.28
+15,Echézeaux,René Engel - domaine d'Eugénie,Echézeaux Grand Cru René Engel - Eugénie,Rouge,1998,2016,125.0
+15,Echézeaux,René Engel - domaine d'Eugénie,Echézeaux Grand Cru René Engel - Eugénie,Rouge,1998,2017,141.6
+15,Echézeaux,René Engel - domaine d'Eugénie,Echézeaux Grand Cru René Engel - Eugénie,Rouge,1998,2018,535.04
+15,Echézeaux,René Engel - domaine d'Eugénie,Echézeaux Grand Cru René Engel - Eugénie,Rouge,1998,2019,623.94
+15,Echézeaux,René Engel - domaine d'Eugénie,Echézeaux Grand Cru René Engel - Eugénie,Rouge,1998,2020,614.0
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2006,448.0
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2007,456.3
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2008,491.93
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2009,486.97
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2010,502.79
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2011,562.29
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2012,627.39
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2013,695.72
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2014,772.52
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2015,927.02
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2016,3511.0
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2017,3996.33
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2018,4405.8
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2019,4707.08
+16,Musigny,Georges Roumier,Musigny Grand Cru Georges Roumier,Rouge,2001,2020,4891.14
+17,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2007,2012,60.0
+17,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2007,2013,61.9
+17,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2007,2014,66.73
+17,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2007,2015,76.52
+17,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2007,2016,83.61
+17,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2007,2017,95.77
+17,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2007,2018,347.0
+17,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2007,2019,389.12
+17,Meursault,Arnaud Ente,Meursault Clos des Ambres Arnaud Ente,Blanc,2007,2020,399.85
+18,Corton-Charlemagne,Leroy (domaine),Corton-Charlemagne Grand Cru Leroy,Blanc,1996,2010,277.67
+18,Corton-Charlemagne,Leroy (domaine),Corton-Charlemagne Grand Cru Leroy,Blanc,1996,2011,291.76
+18,Corton-Charlemagne,Leroy (domaine),Corton-Charlemagne Grand Cru Leroy,Blanc,1996,2012,337.52
+18,Corton-Charlemagne,Leroy (domaine),Corton-Charlemagne Grand Cru Leroy,Blanc,1996,2013,349.02
+18,Corton-Charlemagne,Leroy (domaine),Corton-Charlemagne Grand Cru Leroy,Blanc,1996,2014,370.64
+18,Corton-Charlemagne,Leroy (domaine),Corton-Charlemagne Grand Cru Leroy,Blanc,1996,2015,445.63
+18,Corton-Charlemagne,Leroy (domaine),Corton-Charlemagne Grand Cru Leroy,Blanc,1996,2016,478.31
+18,Corton-Charlemagne,Leroy (domaine),Corton-Charlemagne Grand Cru Leroy,Blanc,1996,2017,522.13
+18,Corton-Charlemagne,Leroy (domaine),Corton-Charlemagne Grand Cru Leroy,Blanc,1996,2018,540.15
+18,Corton-Charlemagne,Leroy (domaine),Corton-Charlemagne Grand Cru Leroy,Blanc,1996,2019,2188.8
+18,Corton-Charlemagne,Leroy (domaine),Corton-Charlemagne Grand Cru Leroy,Blanc,1996,2020,2290.22
+19,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2006,2012,160.0
+19,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2006,2013,170.67
+19,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2006,2014,188.85
+19,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2006,2015,212.43
+19,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2006,2016,225.65
+19,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2006,2017,245.44
+19,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2006,2018,267.9
+19,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2006,2019,1074.0
+19,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2006,2020,1084.6
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2005,248.0
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2006,264.96
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2007,264.96
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2008,277.88
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2009,269.67
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2010,271.96
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2011,304.12
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2012,358.83
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2013,374.43
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2014,419.47
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2015,476.44
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2016,512.18
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2017,1860.0
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2018,2019.43
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2019,2354.95
+20,Richebourg,Leroy (domaine),Richebourg Grand Cru Leroy,Rouge,1998,2020,2423.02
+21,Champagne,Billecart-Salmon,Billecart-Salmon Blanc de Blancs,Blanc Effervescent,1998,2007,25.09
+21,Champagne,Billecart-Salmon,Billecart-Salmon Blanc de Blancs,Blanc Effervescent,1998,2008,27.37
+21,Champagne,Billecart-Salmon,Billecart-Salmon Blanc de Blancs,Blanc Effervescent,1998,2009,25.19
+21,Champagne,Billecart-Salmon,Billecart-Salmon Blanc de Blancs,Blanc Effervescent,1998,2010,26.47
+21,Champagne,Billecart-Salmon,Billecart-Salmon Blanc de Blancs,Blanc Effervescent,1998,2011,25.92
+21,Champagne,Billecart-Salmon,Billecart-Salmon Blanc de Blancs,Blanc Effervescent,1998,2012,30.24
+21,Champagne,Billecart-Salmon,Billecart-Salmon Blanc de Blancs,Blanc Effervescent,1998,2013,30.3
+21,Champagne,Billecart-Salmon,Billecart-Salmon Blanc de Blancs,Blanc Effervescent,1998,2014,31.9
+21,Champagne,Billecart-Salmon,Billecart-Salmon Blanc de Blancs,Blanc Effervescent,1998,2015,32.73
+21,Champagne,Billecart-Salmon,Billecart-Salmon Blanc de Blancs,Blanc Effervescent,1998,2016,37.33
+21,Champagne,Billecart-Salmon,Billecart-Salmon Blanc de Blancs,Blanc Effervescent,1998,2017,40.04
+21,Champagne,Billecart-Salmon,Billecart-Salmon Blanc de Blancs,Blanc Effervescent,1998,2018,37.9
+21,Champagne,Billecart-Salmon,Billecart-Salmon Blanc de Blancs,Blanc Effervescent,1998,2019,40.66
+21,Champagne,Billecart-Salmon,Billecart-Salmon Blanc de Blancs,Blanc Effervescent,1998,2020,165.0
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2005,22.67
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2006,26.31
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2007,22.9
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2008,22.71
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2009,23.14
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2010,26.23
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2011,25.0
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2012,27.25
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2013,31.93
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2014,33.22
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2015,41.71
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2016,101.5
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2017,103.63
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2018,164.0
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2019,180.01
+22,Saumur,Clos Rougeard,Saumur Brézé Clos Rougeard,Blanc,1999,2020,209.59
+23,Grands-Echézeaux,Domaine d'Eugénie (René Engel),Grands-Echézeaux Grand Cru Domaine René Engel - Domaine Eugénie,Rouge,2002,2013,233.33
+23,Grands-Echézeaux,Domaine d'Eugénie (René Engel),Grands-Echézeaux Grand Cru Domaine René Engel - Domaine Eugénie,Rouge,2002,2014,247.18
+23,Grands-Echézeaux,Domaine d'Eugénie (René Engel),Grands-Echézeaux Grand Cru Domaine René Engel - Domaine Eugénie,Rouge,2002,2015,269.0
+23,Grands-Echézeaux,Domaine d'Eugénie (René Engel),Grands-Echézeaux Grand Cru Domaine René Engel - Domaine Eugénie,Rouge,2002,2016,299.26
+23,Grands-Echézeaux,Domaine d'Eugénie (René Engel),Grands-Echézeaux Grand Cru Domaine René Engel - Domaine Eugénie,Rouge,2002,2017,321.43
+23,Grands-Echézeaux,Domaine d'Eugénie (René Engel),Grands-Echézeaux Grand Cru Domaine René Engel - Domaine Eugénie,Rouge,2002,2018,948.0
+23,Grands-Echézeaux,Domaine d'Eugénie (René Engel),Grands-Echézeaux Grand Cru Domaine René Engel - Domaine Eugénie,Rouge,2002,2019,1053.1
+23,Grands-Echézeaux,Domaine d'Eugénie (René Engel),Grands-Echézeaux Grand Cru Domaine René Engel - Domaine Eugénie,Rouge,2002,2020,1332.5
+24,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2003,2013,165.0
+24,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2003,2014,188.11
+24,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2003,2015,208.83
+24,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2003,2016,227.81
+24,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2003,2017,237.74
+24,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2003,2018,261.5
+24,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2003,2019,1011.0
+24,Vosne-Romanée,Prieuré Roch,Vosne-Romanée Le Clos Goillote Prieuré Roch,Rouge,2003,2020,1026.33
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2005,145.2
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2006,155.13
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2007,155.13
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2008,162.7
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2009,160.0
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2010,188.5
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2011,231.0
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2012,287.0
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2013,300.0
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2014,304.0
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2015,345.28
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2016,371.18
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2017,420.47
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2018,456.51
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2019,1634.12
+25,Clos de Vougeot,Leroy (domaine),Clos de Vougeot Grand Cru Leroy,Rouge,1998,2020,1681.35
+26,Montlouis-sur-Loire,Stéphane Cossais,Montlouis-sur-Loire Le Volagré Stéphane Cossais,Blanc,2008,2014,22.0
+26,Montlouis-sur-Loire,Stéphane Cossais,Montlouis-sur-Loire Le Volagré Stéphane Cossais,Blanc,2008,2015,25.35
+26,Montlouis-sur-Loire,Stéphane Cossais,Montlouis-sur-Loire Le Volagré Stéphane Cossais,Blanc,2008,2016,30.18
+26,Montlouis-sur-Loire,Stéphane Cossais,Montlouis-sur-Loire Le Volagré Stéphane Cossais,Blanc,2008,2017,31.92
+26,Montlouis-sur-Loire,Stéphane Cossais,Montlouis-sur-Loire Le Volagré Stéphane Cossais,Blanc,2008,2018,97.28
+26,Montlouis-sur-Loire,Stéphane Cossais,Montlouis-sur-Loire Le Volagré Stéphane Cossais,Blanc,2008,2019,109.44
+26,Montlouis-sur-Loire,Stéphane Cossais,Montlouis-sur-Loire Le Volagré Stéphane Cossais,Blanc,2008,2020,122.8
+27,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2010,2012,21.0
+27,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2010,2013,21.3
+27,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2010,2014,22.62
+27,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2010,2015,24.18
+27,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2010,2016,25.37
+27,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2010,2017,27.49
+27,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2010,2018,99.71
+27,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2010,2019,109.44
+27,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2010,2020,116.66
+28,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2009,2012,25.0
+28,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2009,2013,23.67
+28,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2009,2014,24.12
+28,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2009,2015,25.84
+28,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2009,2016,26.95
+28,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2009,2017,29.02
+28,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2009,2018,85.0
+28,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2009,2019,97.28
+28,Saint-Joseph,Gonon,Saint-Joseph Gonon,Rouge,2009,2020,119.73
+29,Meursault,Domaine d'Auvenay,Meursault 1er Cru Les Gouttes d'Or d'Auvenay,Blanc,2000,2008,133.67
+29,Meursault,Domaine d'Auvenay,Meursault 1er Cru Les Gouttes d'Or d'Auvenay,Blanc,2000,2009,132.38
+29,Meursault,Domaine d'Auvenay,Meursault 1er Cru Les Gouttes d'Or d'Auvenay,Blanc,2000,2010,191.0
+29,Meursault,Domaine d'Auvenay,Meursault 1er Cru Les Gouttes d'Or d'Auvenay,Blanc,2000,2011,215.12
+29,Meursault,Domaine d'Auvenay,Meursault 1er Cru Les Gouttes d'Or d'Auvenay,Blanc,2000,2012,361.0
+29,Meursault,Domaine d'Auvenay,Meursault 1er Cru Les Gouttes d'Or d'Auvenay,Blanc,2000,2013,300.0
+29,Meursault,Domaine d'Auvenay,Meursault 1er Cru Les Gouttes d'Or d'Auvenay,Blanc,2000,2014,322.18
+29,Meursault,Domaine d'Auvenay,Meursault 1er Cru Les Gouttes d'Or d'Auvenay,Blanc,2000,2015,384.66
+29,Meursault,Domaine d'Auvenay,Meursault 1er Cru Les Gouttes d'Or d'Auvenay,Blanc,2000,2016,411.2
+29,Meursault,Domaine d'Auvenay,Meursault 1er Cru Les Gouttes d'Or d'Auvenay,Blanc,2000,2017,469.08
+29,Meursault,Domaine d'Auvenay,Meursault 1er Cru Les Gouttes d'Or d'Auvenay,Blanc,2000,2018,520.88
+29,Meursault,Domaine d'Auvenay,Meursault 1er Cru Les Gouttes d'Or d'Auvenay,Blanc,2000,2019,1548.5
+29,Meursault,Domaine d'Auvenay,Meursault 1er Cru Les Gouttes d'Or d'Auvenay,Blanc,2000,2020,1780.6
