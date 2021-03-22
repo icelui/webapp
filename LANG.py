@@ -1,12 +1,19 @@
 fr = {
-    'title': "La cote des grands vins français",
+    'title': "Quelques exemples de réalisations autour du vin",
+    'choose_app': "Choisissez SVP l'une des réalisations suivantes :",
+    'back_to_main': "(Retour au choix de l'une des réalisations)",
+    'in_progress': "En construction",
+    
+
+    ############################################################################
+    # Chaînes de caractères pour la cote des grands vins de France :
+
+    'title_cotes': "La cote des grands vins de France : recommandations d'investissement",
+
     'viz0': "Informations",
     'viz4': "Visualisations",
     'viz5': "Prédiction 2015 (test)",
     'viz6': "Prédiction 2020",
-    
-    'in_progress': "En construction",
-    
     'choose_wine_alea': "Choisissez un vin parmi cette sélection aléatoire :",
     'choose_wine': "Choisissez un vin :",
     'choose_appellation': "Choisissez une appellation :",
@@ -93,7 +100,7 @@ fr = {
 
                Pour ouvrir les bouteilles : un tire-bouchon à [double levier](https://images-na.ssl-images-amazon.com/images/I/417Oc0h5b9L._AC_.jpg), toujours ! 
 
-               #### Améliorations en cours de développement :
+               #### Améliorations envisagées :
                Amélioration des prédictions grâce à des données supplémentaires d'évaluation des domaines et des vins, collectées sur le site de la
                [Revue du vin de France](https://www.larvf.com/) (données accessibles uniquement aux abonnés).
 
@@ -101,8 +108,53 @@ fr = {
 
                Ajout d'options supplémentaires pour la définition d'un scénario d'investissement.
 
+            ''',
+
+
+    ############################################################################
+    # Chaînes de caractères pour la cote des grands vins de France :
+
+    'title_pipotron': "Un pipotron qui génère des commentaires professionnels de dégustation de vin",
+
+    'real_review': "Voici un commentaire de vin réel, issu de la Revue du Vin de France :",
+    'fake_review': "... et voici un commentaire imaginaire (fictif) généré par le pipotron :",
+    'change_real_review': "Choisir un autre",
+    'change_fake_review': "Choisir un autre",
+    'wanna_know_more': "Vous voulez en savoir plus ?",
+    'change_info_display': "Afficher les informations",
+    'change_info_hide': "Masquer les informations",
+
+    'info_pipotron':
             '''
-                                 
+               #### Origine des données :
+               Les données utilisées ici ont été collectées sur le site de la [Revue du vin de France](https://www.larvf.com), et ne sont
+               accessibles que par abonnement.
+
+               #### Choix d'implémentation :
+               Le pipotron s'appuie sur un générateur de type GPT2, préentraîné sur la langue française par 
+               [Antoine Louis](https://github.com/antoiloui/belgpt2). J'ai fait subir à ce réseau de neurones un entraînement
+               spécifique (_fine tuning_) pour qu'il apprenne à imiter les commentaires de la Revue du vin de France. Cf.
+               [GitHub](https://github.com/icelui/pipotron).
+               Le modèle étant très gros (500 Mo), il n'est pas directement utilisé par ce site web : celui-ci s'appuie sur un
+               "cache" de 2000 commentaires fictifs générés par le modèle.
+               
+               #### Technologies utilisées :
+               Pour la partie web : Python, [Anaconda](https://www.anaconda.com/), [Dash](https://plotly.com/dash/), [Heroku](https://heroku.com/) et
+               [Git](https://git-scm.com/) pour la publication.
+
+               Pour la collecte et la préparation des données : Python, Anaconda, [Scrapy](https://scrapy.org/) et [Pandas](https://pandas.pydata.org/).
+
+               Pour le _deep learning_ : [Tensorflow](https://www.tensorflow.org/) et [Keras](https://keras.io/), et la 
+               bibliothèque [Transformers](https://huggingface.co/transformers/) de la société [HuggingFace](https://huggingface.co).
+
+               #### Amélioration envisagée :
+               Apprendre au réseau de neurones à produire des commentaires différents selon le type du vin (ex: blanc, rouge,
+               effervescent), et permettre à l'utilisateur de choisir le type pour lequel il veut obtenir un commentaire (réel ou
+               fictif).
+
+            ''',
+
+
 
 }
 

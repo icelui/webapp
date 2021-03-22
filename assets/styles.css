@@ -37,6 +37,17 @@ h1 {
     color: black;
 }
 
+h2 {
+    font-size: 17pt;
+    color: black;
+    margin-top: 17px;
+    margin-bottom: 6px;
+    padding: 0px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 h3 {
     font-size: 16pt;
     color: black;
@@ -176,3 +187,37 @@ td {
     margin-right: auto;
 }
 
+.review {
+    background-color: #FFF7F7;
+    border-style: solid;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: brown;
+    width: 70%;
+    padding: 6px;
+    position: relative;
+    font-family: cursive;
+    font-style: italic;
+}
+
+.infos {
+    background-color: #FFF7F7;
+    border-style: solid;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: brown;
+    width: 70%;
+    padding: 6px;
+    position: relative;
+}
+button {
+    margin: 4px;
+}
