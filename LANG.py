@@ -101,6 +101,8 @@ fr = {
                Pour ouvrir les bouteilles : un tire-bouchon à [double levier](https://images-na.ssl-images-amazon.com/images/I/417Oc0h5b9L._AC_.jpg), toujours ! 
 
                #### Améliorations envisagées :
+               Sélection de variables
+
                Amélioration des prédictions grâce à des données supplémentaires d'évaluation des domaines et des vins, collectées sur le site de la
                [Revue du vin de France](https://www.larvf.com/) (données accessibles uniquement aux abonnés).
 
@@ -136,7 +138,7 @@ fr = {
                spécifique (_fine tuning_) pour qu'il apprenne à imiter les commentaires de la Revue du vin de France. Cf.
                [GitHub](https://github.com/icelui/pipotron).
                Le modèle étant très gros (500 Mo), il n'est pas directement utilisé par ce site web : celui-ci s'appuie sur un
-               "cache" de 2000 commentaires fictifs générés par le modèle.
+               "cache" de quelques centaines de commentaires fictifs générés par le modèle.
                
                #### Technologies utilisées :
                Pour la partie web : Python, [Anaconda](https://www.anaconda.com/), [Dash](https://plotly.com/dash/), [Heroku](https://heroku.com/) et
