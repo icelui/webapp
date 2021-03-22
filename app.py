@@ -57,4 +57,5 @@ def display_page(pathname):
 #####################################################################
 # LANCEMENT DU SERVEUR :
 
-app.run_server(debug=True)
+if __name__ == '__main__':   # Indispensable pour Heroku
+    app.run_server(debug=True)
