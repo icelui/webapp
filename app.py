@@ -47,10 +47,10 @@ def display_page(pathname):
     else:
         # Propose un choix à l'utilisateur :
         return [
-            html.H1(children=lang['title']),
-            html.H3(children=lang['choose_app']),
-            html.H4(children=html.A(href="/cotes", children=lang['title_cotes'])),
-            html.H4(html.A(href="/pipotron", children=lang['title_pipotron']))
+          html.H1(children=lang['title']),
+          html.H3(children=lang['choose_app']),
+          html.H4(children=html.A(href="/cotes", children=lang['title_cotes'])),
+          html.H4(html.A(href="/pipotron", children=lang['title_pipotron']))
         ]
 
 

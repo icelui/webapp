@@ -100,21 +100,11 @@ fr = {
 
                Pour ouvrir les bouteilles : un tire-bouchon à [double levier](https://images-na.ssl-images-amazon.com/images/I/417Oc0h5b9L._AC_.jpg), toujours ! 
 
-               #### Améliorations envisagées :
-               Sélection de variables
-
-               Amélioration des prédictions grâce à des données supplémentaires d'évaluation des domaines et des vins, collectées sur le site de la
-               [Revue du vin de France](https://www.larvf.com/) (données accessibles uniquement aux abonnés).
-
-               Ajout de visualisations permettant d'estimer la corrélation entre la cote des vins et la note donnée par la Revue du vin de France.
-
-               Ajout d'options supplémentaires pour la définition d'un scénario d'investissement.
-
             ''',
 
 
     ############################################################################
-    # Chaînes de caractères pour la cote des grands vins de France :
+    # Chaînes de caractères pour le pipotron :
 
     'title_pipotron': "Un pipotron qui génère des commentaires professionnels de dégustation de vin",
 
@@ -125,6 +115,9 @@ fr = {
     'wanna_know_more': "Vous voulez en savoir plus ?",
     'change_info_display': "Afficher les informations",
     'change_info_hide': "Masquer les informations",
+    'choose_wine_color': "Couleur du vin (à choisir) :",
+    'blanc': "Blanc",
+    'rouge': "Rouge",
 
     'info_pipotron':
             '''
@@ -148,11 +141,6 @@ fr = {
 
                Pour le _deep learning_ : [Tensorflow](https://www.tensorflow.org/) et [Keras](https://keras.io/), et la 
                bibliothèque [Transformers](https://huggingface.co/transformers/) de la société [HuggingFace](https://huggingface.co).
-
-               #### Amélioration envisagée :
-               Apprendre au réseau de neurones à produire des commentaires différents selon le type du vin (ex: blanc, rouge,
-               effervescent), et permettre à l'utilisateur de choisir le type pour lequel il veut obtenir un commentaire (réel ou
-               fictif).
 
             ''',
 

@@ -158,7 +158,7 @@ def get_cote_layout():
                     children=[html.Div(
                         id='div_tab_viz0',
                         className='div-tab',
-                        children=[dcc.Markdown(lang['info'])]
+                        children=[dcc.Markdown(lang['info']), html.Br()]
                     )]
                 ),
                 dcc.Tab(

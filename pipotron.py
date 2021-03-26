@@ -21,7 +21,8 @@ from shared import app
 # PREPARATION DES DONNEES (indépendante des actions du client) :
 
 S_pipotron_reviews = pd.read_csv("data/pipotron_reviews.txt", header=None).iloc[:, 0]
-S_pipotron_generated = pd.read_csv("data/pipotron_generated.txt", header=None).iloc[:, 0]
+DF_pipotron_generated = pd.read_csv("data/pipotron_generated.csv", header=None)
+print(list(DF_pipotron_generated.iloc[:,0].head(4)))
 
 # On peut s'arrêter là si besoin pour débugguer :
 """ sys.exit() """
@@ -30,6 +31,13 @@ S_pipotron_generated = pd.read_csv("data/pipotron_generated.txt", header=None).i
 
 #####################################################################
 # FONCTIONS DE GENERATION DE CONTENU (hors callbacks) :
+
+def get_fake_review(color):
+  first_tokens = f"<|review|> <|{color}|>"
+  DF_selection = DF_pipotron_generated[DF_pipotron_generated.iloc[:, 0]==first_tokens]
+  print(first_tokens)
+  print(len(DF_selection))
+  return DF_selection.sample(1).iloc[0, 1]
 
 def get_pipotron_layout():
   return html.Div(className='main', children=[
@@ -42,7 +50,22 @@ def get_pipotron_layout():
     ]),
     html.Div(children=[
       html.H2(children=lang['fake_review']),
-      html.Div(id="fake-review", className="review", children=S_pipotron_generated.sample(1)),  
+      html.Div(children=[
+        lang['choose_wine_color'],
+        dcc.Dropdown(
+          id='color-choice',
+          className='color-choice',
+          options=[
+            {'label': lang['blanc'], 'value': 'blanc'},
+            {'label': lang['rouge'], 'value': 'rouge'}
+          ],
+          value='blanc',
+          searchable=False,
+          clearable=False,
+          multi=False
+        )     
+      ]),
+      html.Div(id="fake-review", className="review", children=get_fake_review('blanc')),  
       html.Button(lang['change_fake_review'], id='change-fake-review', n_clicks=0)
     ]),
     html.Div(children=[
@@ -67,11 +90,12 @@ def update_real_review(n_clicks):
 
 @app.callback(
   Output('fake-review', 'children'), 
-  [Input('change-fake-review', 'n_clicks')]
+  [Input('change-fake-review', 'n_clicks'),
+   Input('color-choice', 'value')]
 )
-def update_fake_review(n_clicks):
-    return S_pipotron_generated.sample(1)
-
+def update_fake_review(n_clicks, color):
+  return get_fake_review(color)
+  
 @app.callback(
   [Output('div-info-pipotron', 'children'),
    Output('change-info', 'children')],
@@ -79,11 +103,8 @@ def update_fake_review(n_clicks):
   [State('change-info', 'children')]
 )
 def update_info(n_clicks, button_text):
-    if button_text==lang['change_info_display']:
-        return html.Div(className="infos", children=dcc.Markdown(lang['info_pipotron'])), lang['change_info_hide']
-    else:
-        return "", lang['change_info_display']
-
-
-
+  if button_text==lang['change_info_display']:
+    return html.Div(className="infos", children=[dcc.Markdown(lang['info_pipotron']), html.Br()]), lang['change_info_hide']
+  else:
+    return "", lang['change_info_display']
 
